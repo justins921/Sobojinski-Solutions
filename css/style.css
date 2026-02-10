@@ -551,6 +551,7 @@ p {
 .service-card {
   background: var(--mcm-offwhite);
   border: var(--border-thick);
+  border-radius: 16px;
   padding: var(--space-md);
   position: relative;
   transition: all var(--transition-fast);
@@ -644,10 +645,12 @@ p {
 
 .content-block-visual .visual-frame {
   border: var(--border-thick);
+  border-radius: 20px;
   background: var(--mcm-offwhite);
   padding: var(--space-md);
   position: relative;
   box-shadow: var(--shadow-lg);
+  overflow: hidden;
 }
 
 /* --- Stats / Metrics --- */
@@ -689,6 +692,7 @@ p {
 .testimonial-card {
   background: var(--mcm-offwhite);
   border: var(--border-thick);
+  border-radius: 20px;
   padding: var(--space-md);
   position: relative;
   box-shadow: var(--shadow-retro);
@@ -882,6 +886,7 @@ p {
   gap: 1rem;
   background: var(--mcm-mustard);
   border: var(--border-thick);
+  border-radius: 16px;
   padding: 1rem 2rem;
   box-shadow: var(--shadow-retro);
 }
@@ -982,6 +987,7 @@ p {
   width: 40px;
   height: 40px;
   border: 2px solid rgba(245, 240, 225, 0.3);
+  border-radius: 10px;
   color: var(--mcm-cream);
   transition: all var(--transition-fast);
 }
@@ -1047,6 +1053,7 @@ p {
   font-family: var(--font-body);
   font-size: 1rem;
   border: var(--border-thick);
+  border-radius: 12px;
   background: var(--mcm-offwhite);
   color: var(--mcm-charcoal);
   transition: border-color var(--transition-fast);
@@ -1075,6 +1082,7 @@ p {
 .contact-card {
   background: var(--mcm-offwhite);
   border: var(--border-thick);
+  border-radius: 20px;
   padding: var(--space-md);
   text-align: center;
   box-shadow: var(--shadow-retro);
@@ -1229,6 +1237,349 @@ p {
   position: absolute;
   pointer-events: none;
   z-index: 0;
+}
+
+/* --- Constellation dot-line background (MCM graphic design pattern) --- */
+.bg-constellation {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-constellation::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, var(--mcm-cream-dark) 2px, transparent 2px),
+    radial-gradient(circle, var(--mcm-cream-dark) 1.5px, transparent 1.5px),
+    radial-gradient(circle, var(--mcm-cream-dark) 1px, transparent 1px);
+  background-size: 180px 180px, 120px 120px, 80px 80px;
+  background-position: 10px 10px, 60px 80px, 30px 45px;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.bg-constellation > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Retro Flag / Ribbon Section Labels (inspired by MCM website) --- */
+.flag-label {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--mcm-charcoal);
+  background: var(--mcm-mustard);
+  padding: 0.4rem 1.5rem 0.4rem 1rem;
+  margin-bottom: var(--space-sm);
+  border: 2px solid var(--mcm-charcoal);
+  border-radius: 4px 0 0 4px;
+}
+
+.flag-label::after {
+  content: '';
+  position: absolute;
+  right: -12px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: calc(50% + 1px) solid var(--mcm-mustard);
+  border-bottom: calc(50% + 1px) solid var(--mcm-mustard);
+  border-right: 12px solid transparent;
+}
+
+.flag-label.flag-coral {
+  background: var(--mcm-coral);
+  color: var(--mcm-cream);
+}
+
+.flag-label.flag-coral::after {
+  border-top-color: var(--mcm-coral);
+  border-bottom-color: var(--mcm-coral);
+}
+
+.flag-label.flag-teal {
+  background: var(--mcm-teal);
+  color: var(--mcm-cream);
+}
+
+.flag-label.flag-teal::after {
+  border-top-color: var(--mcm-teal);
+  border-bottom-color: var(--mcm-teal);
+}
+
+.flag-label.flag-olive {
+  background: var(--mcm-olive);
+  color: var(--mcm-cream);
+}
+
+.flag-label.flag-olive::after {
+  border-top-color: var(--mcm-olive);
+  border-bottom-color: var(--mcm-olive);
+}
+
+/* --- Retro Pill Tags (service features) --- */
+.pill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin-top: var(--space-sm);
+}
+
+.pill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  border: 2px solid var(--mcm-charcoal);
+  background: var(--mcm-offwhite);
+  color: var(--mcm-charcoal);
+  transition: all var(--transition-fast);
+}
+
+.pill-tag:hover {
+  background: var(--mcm-mustard);
+}
+
+.pill-tag.pill-teal {
+  background: var(--mcm-teal);
+  color: var(--mcm-cream);
+  border-color: var(--mcm-teal-dark);
+}
+
+.pill-tag.pill-coral {
+  background: var(--mcm-coral);
+  color: var(--mcm-cream);
+  border-color: var(--mcm-coral-dark);
+}
+
+.pill-tag.pill-mustard {
+  background: var(--mcm-mustard);
+  color: var(--mcm-charcoal);
+  border-color: var(--mcm-mustard-dark);
+}
+
+.pill-tag.pill-olive {
+  background: var(--mcm-olive);
+  color: var(--mcm-cream);
+  border-color: var(--mcm-olive);
+}
+
+.pill-tag::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.6;
+}
+
+/* --- Horizontal Color Bars (Harstons sign motif) --- */
+.h-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: var(--space-sm) 0;
+}
+
+.h-bar {
+  height: 6px;
+  border-radius: 3px;
+}
+
+.h-bars-left .h-bar { margin-right: auto; }
+.h-bars-right .h-bar { margin-left: auto; }
+
+.h-bar.bar-teal { background: var(--mcm-teal); }
+.h-bar.bar-coral { background: var(--mcm-coral); }
+.h-bar.bar-mustard { background: var(--mcm-mustard); }
+.h-bar.bar-blue { background: var(--mcm-blue); }
+.h-bar.bar-olive { background: var(--mcm-olive); }
+
+.h-bar-sm { width: 40px; }
+.h-bar-md { width: 70px; }
+.h-bar-lg { width: 100px; }
+.h-bar-xl { width: 140px; }
+
+/* --- Squircle Cards (rounded rectangle wall art style) --- */
+.squircle-card {
+  background: var(--mcm-offwhite);
+  border: 3px solid var(--mcm-charcoal);
+  border-radius: 20px;
+  padding: var(--space-md);
+  position: relative;
+  transition: all var(--transition-fast);
+  box-shadow: 5px 5px 0 rgba(45, 52, 54, 0.12);
+}
+
+.squircle-card:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 rgba(45, 52, 54, 0.12);
+}
+
+.squircle-card.squircle-teal {
+  border-color: var(--mcm-teal);
+}
+
+.squircle-card.squircle-coral {
+  border-color: var(--mcm-coral);
+}
+
+.squircle-card.squircle-mustard {
+  border-color: var(--mcm-mustard-dark);
+}
+
+.squircle-card h3,
+.squircle-card h4 {
+  margin-bottom: var(--space-xs);
+}
+
+.squircle-card p {
+  color: var(--mcm-brown);
+  font-size: 0.95rem;
+}
+
+/* --- Teal Grid Background (rug-inspired) --- */
+.bg-teal-grid {
+  background-color: var(--mcm-teal);
+  background-image:
+    linear-gradient(var(--mcm-teal-dark) 2px, transparent 2px),
+    linear-gradient(90deg, var(--mcm-teal-dark) 2px, transparent 2px);
+  background-size: 60px 60px;
+  color: var(--mcm-cream);
+}
+
+.bg-teal-grid h2,
+.bg-teal-grid h3,
+.bg-teal-grid h4 {
+  color: var(--mcm-cream);
+}
+
+.bg-teal-grid p {
+  color: var(--mcm-cream);
+  opacity: 0.9;
+}
+
+/* --- Overlapping Squircle Decorative Element --- */
+.squircle-cluster {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.squircle-shape {
+  position: absolute;
+  border-radius: 24px;
+  border: 3px solid var(--mcm-charcoal);
+}
+
+/* --- Enhanced Nav CTA with rounded pill style --- */
+.nav-cta {
+  border-radius: 100px !important;
+}
+
+/* --- Rounded button variant --- */
+.btn-rounded {
+  border-radius: 100px;
+}
+
+/* --- Section with horizontal bar accents --- */
+.section-bar-accent {
+  position: relative;
+}
+
+.section-bar-accent::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 60px;
+  height: 6px;
+  background: var(--mcm-coral);
+  border-radius: 3px;
+  transform: translateY(-50%);
+}
+
+.section-bar-accent::after {
+  content: '';
+  position: absolute;
+  top: calc(50% + 14px);
+  left: 0;
+  width: 90px;
+  height: 6px;
+  background: var(--mcm-teal);
+  border-radius: 3px;
+  transform: translateY(-50%);
+}
+
+/* --- Boomerang CSS shape --- */
+.boomerang {
+  position: absolute;
+  pointer-events: none;
+}
+
+.boomerang::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 30px;
+  border-radius: 60px 60px 0 0;
+  border: 4px solid transparent;
+  border-bottom: none;
+  transform: rotate(-30deg);
+}
+
+.boomerang.boomerang-coral::before { border-color: var(--mcm-coral); }
+.boomerang.boomerang-teal::before { border-color: var(--mcm-teal); }
+.boomerang.boomerang-mustard::before { border-color: var(--mcm-mustard); }
+
+/* --- Enhanced hero with constellation orbit illustration --- */
+.hero-orbit {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.hero-orbit-ring {
+  position: absolute;
+  border: 2px solid var(--mcm-charcoal);
+  border-radius: 50%;
+  opacity: 0.15;
+}
+
+.hero-orbit-ring:nth-child(1) {
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+}
+
+.hero-orbit-ring:nth-child(2) {
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  border-style: dashed;
+  opacity: 0.1;
 }
 
 /* --- Responsive --- */
