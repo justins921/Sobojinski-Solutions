@@ -3,7 +3,7 @@
    Warm, organic, handcrafted aesthetic
    ========================================================================== */
 
-/* --- Google Fonts Import --- */
+/* --- Google Fonts --- */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Josefin+Sans:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 /* --- CSS Custom Properties --- */
@@ -30,7 +30,7 @@
   --mcm-offwhite: #FAF8F2;
   --mcm-paper: #F0EBD8;
 
-  /* Border colors — subtle, warm gray instead of hard charcoal */
+  /* Border colors */
   --border-color: rgba(45, 52, 54, 0.18);
   --border-color-med: rgba(45, 52, 54, 0.25);
   --border-color-dark: rgba(45, 52, 54, 0.5);
@@ -40,7 +40,7 @@
   --font-body: 'Josefin Sans', 'Helvetica Neue', sans-serif;
   --font-accent: 'Space Grotesk', monospace;
 
-  /* Spacing — generous */
+  /* Spacing */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 2rem;
@@ -53,12 +53,12 @@
   --transition-med: 0.4s ease;
   --transition-slow: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-  /* Borders — soft */
+  /* Borders */
   --border-thin: 1.5px solid var(--border-color);
   --border-thick: 2px solid var(--border-color-med);
   --border-card: 1.5px solid var(--border-color);
 
-  /* Shadows — soft, diffused, organic */
+  /* Shadows */
   --shadow-sm: 0 1px 4px rgba(45, 52, 54, 0.06);
   --shadow-md: 0 2px 12px rgba(45, 52, 54, 0.08);
   --shadow-lg: 0 4px 24px rgba(45, 52, 54, 0.1);
@@ -90,7 +90,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Paper grain texture — visible for warmth */
+/* Paper grain texture */
 body::before {
   content: '';
   position: fixed;
@@ -184,7 +184,7 @@ p {
   padding: var(--space-xxl) 0;
 }
 
-/* --- Navigation — clean, subtle --- */
+/* --- Navigation --- */
 .nav {
   position: fixed;
   top: 0;
@@ -330,7 +330,7 @@ p {
   transform: rotate(-45deg) translate(5px, -6px);
 }
 
-/* --- Buttons — pill-shaped, warm, organic --- */
+/* --- Buttons --- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -411,10 +411,6 @@ p {
   font-size: 0.9rem;
 }
 
-.btn-rounded {
-  border-radius: 100px;
-}
-
 /* --- Hero Section --- */
 .hero {
   min-height: 100vh;
@@ -476,13 +472,8 @@ p {
   align-items: center;
 }
 
-/* Hero decorative elements */
 .hero-decor {
   position: relative;
-}
-
-.hero-decor .starburst {
-  position: absolute;
 }
 
 /* --- Decorative SVG Elements --- */
@@ -494,11 +485,6 @@ p {
 .decor-diamond {
   display: inline-block;
   animation: pulse 3s ease-in-out infinite;
-}
-
-.decor-atom {
-  display: inline-block;
-  animation: spin 15s linear infinite reverse;
 }
 
 @keyframes spin {
@@ -564,7 +550,7 @@ p {
   font-size: 1.1rem;
 }
 
-/* --- Services Cards — soft, warm --- */
+/* --- Services Cards --- */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -786,9 +772,7 @@ p {
   color: var(--mcm-cream);
 }
 
-.bg-teal h2,
-.bg-teal h3,
-.bg-teal h4 {
+.bg-teal h2, .bg-teal h3, .bg-teal h4 {
   color: var(--mcm-cream);
 }
 
@@ -802,8 +786,7 @@ p {
   color: var(--mcm-cream);
 }
 
-.bg-coral h2,
-.bg-coral h3 {
+.bg-coral h2, .bg-coral h3 {
   color: var(--mcm-cream);
 }
 
@@ -812,9 +795,7 @@ p {
   color: var(--mcm-cream);
 }
 
-.bg-charcoal h2,
-.bg-charcoal h3,
-.bg-charcoal h4 {
+.bg-charcoal h2, .bg-charcoal h3, .bg-charcoal h4 {
   color: var(--mcm-cream);
 }
 
@@ -831,7 +812,7 @@ p {
   background: var(--mcm-offwhite);
 }
 
-/* --- Retro stripe divider — thicker, bolder top bar --- */
+/* --- Retro stripe divider --- */
 .retro-stripe {
   height: 10px;
   display: flex;
@@ -847,7 +828,7 @@ p {
 .retro-stripe span:nth-child(4) { background: var(--mcm-mustard); }
 .retro-stripe span:nth-child(5) { background: var(--mcm-olive); }
 
-/* --- Olive section divider (simple line) --- */
+/* --- Olive divider --- */
 .olive-divider {
   width: 100%;
   height: 1.5px;
@@ -894,7 +875,6 @@ p {
   margin: 0 auto;
 }
 
-/* Connector dots between steps */
 .process-step:not(:last-child)::after {
   content: '';
   position: absolute;
@@ -1057,7 +1037,7 @@ p {
   opacity: 1;
 }
 
-/* --- Form Styles — soft, rounded --- */
+/* --- Form Styles --- */
 .form-group {
   margin-bottom: var(--space-sm);
 }
@@ -1159,84 +1139,7 @@ p {
   color: var(--mcm-brown);
 }
 
-/* --- Pricing Table --- */
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-md);
-}
-
-.pricing-card {
-  background: var(--mcm-offwhite);
-  border: var(--border-card);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: var(--shadow-card);
-  transition: all var(--transition-med);
-}
-
-.pricing-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-card-hover);
-}
-
-.pricing-card.featured {
-  border-color: var(--mcm-teal);
-  position: relative;
-}
-
-.pricing-card.featured::before {
-  content: 'Most Popular';
-  position: absolute;
-  top: 1rem;
-  right: -2rem;
-  background: var(--mcm-coral);
-  color: var(--mcm-cream);
-  font-family: var(--font-accent);
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding: 0.3rem 2.5rem;
-  transform: rotate(45deg);
-}
-
-.pricing-card-header {
-  background: var(--mcm-teal);
-  color: var(--mcm-cream);
-  padding: var(--space-md);
-  text-align: center;
-}
-
-.pricing-card-header h3 {
-  color: var(--mcm-cream);
-  font-size: 1.4rem;
-}
-
-.pricing-card-body {
-  padding: var(--space-md);
-}
-
-.pricing-features {
-  list-style: none;
-  margin-bottom: var(--space-md);
-}
-
-.pricing-features li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--mcm-cream-dark);
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.pricing-features li svg {
-  flex-shrink: 0;
-  color: var(--mcm-teal);
-}
-
-/* --- Scroll-reveal (JS controlled) --- */
+/* --- Scroll-reveal --- */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -1248,7 +1151,7 @@ p {
   transform: translateY(0);
 }
 
-/* --- Decorative Background Patterns --- */
+/* --- Background Patterns --- */
 .bg-pattern-dots {
   background-image: radial-gradient(var(--mcm-cream-dark) 1.5px, transparent 1.5px);
   background-size: 24px 24px;
@@ -1261,14 +1164,12 @@ p {
   background-size: 40px 40px;
 }
 
-/* --- Boomerang / Atomic decorative illustrations --- */
 .atomic-decor {
   position: absolute;
   pointer-events: none;
   z-index: 0;
 }
 
-/* --- Constellation dot-line background --- */
 .bg-constellation {
   position: relative;
   overflow: hidden;
@@ -1297,7 +1198,7 @@ p {
   z-index: 1;
 }
 
-/* --- Retro Flag / Ribbon Section Labels — refined, italic --- */
+/* --- Flag Labels --- */
 .flag-label {
   display: inline-flex;
   align-items: center;
@@ -1327,7 +1228,6 @@ p {
   border-right: 12px solid transparent;
 }
 
-/* Flag color variants */
 .flag-label.flag-coral {
   background: var(--mcm-coral);
   color: var(--mcm-cream);
@@ -1364,7 +1264,7 @@ p {
   border-bottom-color: var(--mcm-mustard);
 }
 
-/* --- Retro Pill Tags (service features) — softer --- */
+/* --- Pill Tags --- */
 .pill-tags {
   display: flex;
   flex-wrap: wrap;
@@ -1429,34 +1329,7 @@ p {
   opacity: 0.5;
 }
 
-/* --- Horizontal Color Bars (Harstons sign motif) --- */
-.h-bars {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: var(--space-sm) 0;
-}
-
-.h-bar {
-  height: 5px;
-  border-radius: 3px;
-}
-
-.h-bars-left .h-bar { margin-right: auto; }
-.h-bars-right .h-bar { margin-left: auto; }
-
-.h-bar.bar-teal { background: var(--mcm-teal); }
-.h-bar.bar-coral { background: var(--mcm-coral); }
-.h-bar.bar-mustard { background: var(--mcm-mustard); }
-.h-bar.bar-blue { background: var(--mcm-blue); }
-.h-bar.bar-olive { background: var(--mcm-olive); }
-
-.h-bar-sm { width: 40px; }
-.h-bar-md { width: 70px; }
-.h-bar-lg { width: 100px; }
-.h-bar-xl { width: 140px; }
-
-/* --- Featured Work / Portfolio Cards --- */
+/* --- Featured Work Cards --- */
 .featured-work-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -1549,7 +1422,7 @@ p {
   border-color: var(--mcm-teal);
 }
 
-/* --- Sprint / Feature Banner --- */
+/* --- Sprint Banner --- */
 .sprint-banner {
   background: var(--mcm-coral);
   border-radius: 20px;
@@ -1586,7 +1459,6 @@ p {
   color: var(--mcm-charcoal);
 }
 
-/* Decorative starburst in banner */
 .sprint-banner::before {
   content: '';
   position: absolute;
@@ -1617,36 +1489,6 @@ p {
   align-items: center;
 }
 
-/* --- Squircle Cards --- */
-.squircle-card {
-  background: var(--mcm-offwhite);
-  border: var(--border-card);
-  border-radius: 16px;
-  padding: var(--space-md);
-  position: relative;
-  transition: all var(--transition-med);
-  box-shadow: var(--shadow-card);
-}
-
-.squircle-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-card-hover);
-}
-
-.squircle-card.squircle-teal { border-color: rgba(42, 157, 143, 0.3); }
-.squircle-card.squircle-coral { border-color: rgba(231, 111, 81, 0.3); }
-.squircle-card.squircle-mustard { border-color: rgba(233, 196, 106, 0.4); }
-
-.squircle-card h3,
-.squircle-card h4 {
-  margin-bottom: var(--space-xs);
-}
-
-.squircle-card p {
-  color: var(--mcm-brown);
-  font-size: 0.95rem;
-}
-
 /* --- Teal Grid Background --- */
 .bg-teal-grid {
   background-color: var(--mcm-teal);
@@ -1657,81 +1499,13 @@ p {
   color: var(--mcm-cream);
 }
 
-.bg-teal-grid h2,
-.bg-teal-grid h3,
-.bg-teal-grid h4 {
+.bg-teal-grid h2, .bg-teal-grid h3, .bg-teal-grid h4 {
   color: var(--mcm-cream);
 }
 
 .bg-teal-grid p {
   color: var(--mcm-cream);
   opacity: 0.9;
-}
-
-/* --- Boomerang CSS shape --- */
-.boomerang {
-  position: absolute;
-  pointer-events: none;
-}
-
-.boomerang::before {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 30px;
-  border-radius: 60px 60px 0 0;
-  border: 3px solid transparent;
-  border-bottom: none;
-  transform: rotate(-30deg);
-}
-
-.boomerang.boomerang-coral::before { border-color: var(--mcm-coral); }
-.boomerang.boomerang-teal::before { border-color: var(--mcm-teal); }
-.boomerang.boomerang-mustard::before { border-color: var(--mcm-mustard); }
-
-/* --- Orbit rings (hero decoration) --- */
-.hero-orbit {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.hero-orbit-ring {
-  position: absolute;
-  border: 1.5px solid var(--mcm-charcoal);
-  border-radius: 50%;
-  opacity: 0.1;
-}
-
-.hero-orbit-ring:nth-child(1) {
-  top: 15%;
-  left: 15%;
-  width: 70%;
-  height: 70%;
-}
-
-.hero-orbit-ring:nth-child(2) {
-  top: 25%;
-  left: 25%;
-  width: 50%;
-  height: 50%;
-  border-style: dashed;
-  opacity: 0.07;
-}
-
-/* --- Divider Shapes --- */
-.divider-wave {
-  position: relative;
-  height: 60px;
-  overflow: hidden;
-}
-
-.divider-wave svg {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }
 
 /* --- Responsive --- */
@@ -1825,10 +1599,6 @@ p {
   .footer-bottom {
     flex-direction: column;
     text-align: center;
-  }
-
-  .pricing-grid {
-    grid-template-columns: 1fr;
   }
 
   .contact-grid {
