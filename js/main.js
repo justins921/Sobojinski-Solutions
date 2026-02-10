@@ -142,22 +142,45 @@
 
       var submitBtn = contactForm.querySelector('button[type="submit"]');
       var originalText = submitBtn.innerHTML;
+      var formAction = contactForm.getAttribute('action');
 
       submitBtn.innerHTML = 'Sending...';
       submitBtn.disabled = true;
 
-      // Simulate form submission (replace with actual endpoint)
-      setTimeout(function() {
-        submitBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="2"/><path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Message Sent!';
-        submitBtn.style.background = 'var(--mcm-olive)';
+      var formData = new FormData(contactForm);
+
+      fetch(formAction, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(function(response) {
+        if (response.ok) {
+          submitBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="2"/><path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Message Sent!';
+          submitBtn.style.background = 'var(--mcm-olive)';
+          contactForm.reset();
+
+          setTimeout(function() {
+            submitBtn.innerHTML = originalText;
+            submitBtn.style.background = '';
+            submitBtn.disabled = false;
+          }, 3000);
+        } else {
+          throw new Error('Form submission failed');
+        }
+      })
+      .catch(function() {
+        submitBtn.innerHTML = 'Error — Please try again';
+        submitBtn.style.background = 'var(--mcm-coral)';
 
         setTimeout(function() {
           submitBtn.innerHTML = originalText;
           submitBtn.style.background = '';
           submitBtn.disabled = false;
-          contactForm.reset();
         }, 3000);
-      }, 1500);
+      });
     });
   }
 

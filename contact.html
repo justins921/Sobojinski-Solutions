@@ -108,7 +108,9 @@
           <h2>Tell Us About<br>Your <span class="text-teal">Project</span></h2>
           <p style="margin-bottom:2rem;">Fill out the form and we&rsquo;ll get back to you within 24 hours. Or if you prefer, call us directly or book a strategy call using the links above.</p>
 
-          <form id="contactForm" action="#" method="POST">
+          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="hidden" name="_subject" value="New inquiry from Sobojinski Solutions website">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
               <div class="form-group">
                 <label for="firstName" class="form-label">First Name</label>
