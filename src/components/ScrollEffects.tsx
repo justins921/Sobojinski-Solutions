@@ -1,8 +1,11 @@
 'use client'
 
 import { useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function ScrollEffects() {
+  const pathname = usePathname()
+
   useEffect(() => {
     // Scroll-reveal using IntersectionObserver
     const revealElements = document.querySelectorAll('.reveal')
@@ -79,7 +82,7 @@ export default function ScrollEffects() {
       counterObserver.disconnect()
       anchorLinks.forEach((link) => link.removeEventListener('click', handleAnchorClick))
     }
-  }, [])
+  }, [pathname])
 
   return null
 }

@@ -18,7 +18,7 @@ export default function HomePage() {
                 <span className="highlight">Modern Business</span>
               </h1>
               <p className="hero-subtitle fade-in-up delay-2">
-                We build specialized operating systems that solve real problems across healthcare, hospitality, workforce management, and digital marketing.
+                We build specialized operating systems that solve real problems across healthcare, golf improvement, workforce management, and digital marketing.
               </p>
               <div className="hero-buttons fade-in-up delay-3">
                 <Link href="/products" className="btn btn-primary btn-lg">Explore Products</Link>
@@ -89,7 +89,7 @@ export default function HomePage() {
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /><path d="M2 12h20" /></svg>
               </div>
               <h3>Golf OS</h3>
-              <span className="product-tag">Hospitality</span>
+              <span className="product-tag">Golf Improvement</span>
               <p>Complete golf course and club management. Tee time bookings, member management, POS integration, and course operations all in one platform.</p>
               <a href="https://golf.sobojinskisolutions.com" className="btn btn-outline">Learn More</a>
             </div>

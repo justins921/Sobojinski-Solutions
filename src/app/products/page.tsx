@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Products',
-  description: 'Explore our suite of purpose-built software platforms: EMR OS for healthcare, Golf OS for course management, Work OS for workforce coordination, and SEO OS for digital marketing.',
+  description: 'Explore our suite of purpose-built software platforms: EMR OS for healthcare, Golf OS for golf improvement, Work OS for workforce coordination, and SEO OS for digital marketing.',
 }
 
 const CheckIcon = () => (
@@ -63,7 +63,7 @@ export default function ProductsPage() {
         <div className="container">
           <div className="content-block reversed reveal">
             <div className="content-block-text">
-              <div className="section-label" style={{ color: '#22C55E' }}>Hospitality</div>
+              <div className="section-label" style={{ color: '#22C55E' }}>Golf Improvement</div>
               <h2>Golf OS</h2>
               <p>Complete golf course and club management in one platform. Golf OS handles tee time bookings, member management, POS integration, and course operations — giving your staff and members a seamless experience.</p>
               <p>Designed for courses, clubs, and resorts that want modern tools without the cost and complexity of legacy golf management software.</p>

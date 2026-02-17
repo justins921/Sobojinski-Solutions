@@ -22,7 +22,7 @@ export default function AboutPage() {
         <div className="container">
           <div className="mission-block reveal">
             <h2>Creating Solutions for Your Business Needs</h2>
-            <p>Sobojinski Solutions is a business solutions company that builds purpose-built software platforms. We engineer specialized operating systems for healthcare, hospitality, workforce management, and digital marketing — solving real problems with modern technology.</p>
+            <p>Sobojinski Solutions is a business solutions company that builds purpose-built software platforms. We engineer specialized operating systems for healthcare, golf improvement, workforce management, and digital marketing — solving real problems with modern technology.</p>
           </div>
         </div>
       </section>
@@ -48,7 +48,7 @@ export default function AboutPage() {
                   <div className="timeline-dot"></div>
                   <div className="timeline-year">The Pivot</div>
                   <h4>Identifying Gaps</h4>
-                  <p>Working with clients across healthcare, hospitality, and other industries, we saw the same pattern: businesses stuck with clunky, outdated software that didn&rsquo;t fit their needs.</p>
+                  <p>Working with clients across healthcare, golf, and other industries, we saw the same pattern: businesses stuck with clunky, outdated software that didn&rsquo;t fit their needs.</p>
                 </div>
                 <div className="timeline-item">
                   <div className="timeline-dot"></div>
