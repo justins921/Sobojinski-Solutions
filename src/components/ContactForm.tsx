@@ -43,44 +43,48 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+      <div className="form-row">
         <div className="form-group">
           <label htmlFor="firstName" className="form-label">First Name</label>
-          <input type="text" id="firstName" name="firstName" className="form-input" required />
+          <input type="text" id="firstName" name="firstName" className="form-input" placeholder="John" required />
         </div>
         <div className="form-group">
           <label htmlFor="lastName" className="form-label">Last Name</label>
-          <input type="text" id="lastName" name="lastName" className="form-input" required />
+          <input type="text" id="lastName" name="lastName" className="form-input" placeholder="Doe" required />
         </div>
       </div>
       <div className="form-group">
         <label htmlFor="email" className="form-label">Email</label>
-        <input type="email" id="email" name="email" className="form-input" required />
+        <input type="email" id="email" name="email" className="form-input" placeholder="john@company.com" required />
       </div>
       <div className="form-group">
         <label htmlFor="phone" className="form-label">Phone (optional)</label>
-        <input type="tel" id="phone" name="phone" className="form-input" />
+        <input type="tel" id="phone" name="phone" className="form-input" placeholder="+1 (555) 000-0000" />
       </div>
       <div className="form-group">
-        <label htmlFor="service" className="form-label">What are you interested in?</label>
+        <label htmlFor="service" className="form-label">What product are you interested in?</label>
         <select id="service" name="service" className="form-select">
-          <option value="">Select a service...</option>
-          <option value="web-design">Custom Web Design</option>
-          <option value="seo">SEO Services</option>
-          <option value="both">Web Design + SEO</option>
-          <option value="other">Something else</option>
+          <option value="">Select a product...</option>
+          <option value="emr-os">EMR OS — Healthcare Platform</option>
+          <option value="golf-os">Golf OS — Golf Management</option>
+          <option value="work-os">Work OS — Workforce Management</option>
+          <option value="seo-os">SEO OS — SEO Platform</option>
+          <option value="web-design">Web Design Services</option>
+          <option value="general">General Inquiry</option>
         </select>
       </div>
       <div className="form-group">
-        <label htmlFor="message" className="form-label">Tell us about your project</label>
-        <textarea id="message" name="message" className="form-textarea" rows={5} required></textarea>
+        <label htmlFor="message" className="form-label">Tell us about your needs</label>
+        <textarea id="message" name="message" className="form-textarea" rows={5} placeholder="Describe your project or business challenge..." required></textarea>
       </div>
       <button
         type="submit"
         className="btn btn-primary btn-lg"
         style={{
+          width: '100%',
           marginTop: '0.5rem',
-          background: status === 'sent' ? 'var(--mcm-olive)' : status === 'error' ? 'var(--mcm-coral)' : undefined,
+          background: status === 'sent' ? '#10B981' : status === 'error' ? '#EF4444' : undefined,
+          borderColor: status === 'sent' ? '#10B981' : status === 'error' ? '#EF4444' : undefined,
         }}
         disabled={status === 'sending'}
       >
@@ -93,7 +97,7 @@ export default function ContactForm() {
         {status === 'sending' && 'Sending...'}
         {status === 'sent' && (
           <>
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="currentColor" strokeWidth="2" /><path d="M6 9l2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9l4 4 6-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
             Message Sent!
           </>
         )}

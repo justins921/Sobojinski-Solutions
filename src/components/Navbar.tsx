@@ -11,30 +11,33 @@ export default function Navbar() {
 
   useEffect(() => {
     function handleScroll() {
-      setScrolled(window.pageYOffset > 50)
+      setScrolled(window.scrollY > 20)
     }
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    setMenuOpen(false)
+  }, [pathname])
+
   const navItems = [
     { href: '/', label: 'Home' },
+    { href: '/products', label: 'Products' },
     { href: '/about', label: 'About' },
-    { href: '/web-design', label: 'Web Design' },
-    { href: '/seo', label: 'SEO' },
     { href: '/contact', label: 'Contact' },
   ]
 
   return (
-    <nav className={`nav${scrolled ? ' scrolled' : ''}`} id="nav">
+    <nav className={`nav${scrolled ? ' scrolled' : ''}`} role="navigation" aria-label="Main navigation">
       <div className="nav-inner">
-        <Link href="/" className="nav-logo">
-          <svg className="nav-logo-icon" viewBox="0 0 48 48" fill="none">
-            <circle cx="24" cy="24" r="6" fill="#2A9D8F" />
-            <ellipse cx="24" cy="24" rx="22" ry="8" stroke="#2D3436" strokeWidth="1.5" fill="none" />
-            <ellipse cx="24" cy="24" rx="22" ry="8" stroke="#2D3436" strokeWidth="1.5" fill="none" transform="rotate(60 24 24)" />
-            <ellipse cx="24" cy="24" rx="22" ry="8" stroke="#2D3436" strokeWidth="1.5" fill="none" transform="rotate(120 24 24)" />
-            <circle cx="24" cy="24" r="3" fill="#E76F51" />
+        <Link href="/" className="nav-logo" aria-label="Sobojinski Solutions - Home">
+          <svg className="nav-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="40" height="40" rx="10" fill="#0F172A" />
+            <path d="M12 14h6v6h-6z" fill="#2563EB" />
+            <path d="M22 14h6v6h-6z" fill="#10B981" />
+            <path d="M12 24h6v6h-6z" fill="#8B5CF6" />
+            <path d="M22 24h6v6h-6z" fill="#F97316" />
           </svg>
           <div className="nav-logo-text">
             Sobojinski
@@ -45,7 +48,8 @@ export default function Navbar() {
         <button
           className={`nav-toggle${menuOpen ? ' active' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
         >
           <span></span>
           <span></span>
@@ -58,15 +62,14 @@ export default function Navbar() {
               <Link
                 href={item.href}
                 className={pathname === item.href ? 'active' : ''}
-                onClick={() => setMenuOpen(false)}
               >
                 {item.label}
               </Link>
             </li>
           ))}
           <li>
-            <Link href="/contact" className="nav-cta" onClick={() => setMenuOpen(false)}>
-              Book a Call
+            <Link href="/contact" className="nav-cta">
+              Get Started
             </Link>
           </li>
         </ul>
