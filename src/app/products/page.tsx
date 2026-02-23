@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Products',
-  description: 'Explore our suite of purpose-built software platforms: EMR OS for healthcare, Golf OS for golf improvement, Work OS for workforce coordination, and SEO OS for digital marketing.',
+  title: 'Products & Services',
+  description: 'Explore our purpose-built software platforms and professional services: EMR OS, Golf OS, Work OS, SEO OS, plus custom web design and SEO services.',
 }
 
 const CheckIcon = () => (
@@ -15,9 +15,9 @@ export default function ProductsPage() {
     <>
       <section className="page-header">
         <div className="container">
-          <div className="section-label">Our Products</div>
-          <h1>Purpose-Built Platforms</h1>
-          <p>Each product is an independent operating system designed for the specific workflows, compliance needs, and daily operations of its industry.</p>
+          <div className="section-label">Products &amp; Services</div>
+          <h1>Platforms &amp; Professional Services</h1>
+          <p>Purpose-built software platforms for specific industries, plus expert web design and SEO services to grow your digital presence.</p>
         </div>
       </section>
 
@@ -164,12 +164,78 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Also Offering Web Design */}
-      <section className="section">
+      {/* Web Design */}
+      <section className="section" id="web-design">
         <div className="container">
-          <div className="mission-block reveal">
-            <h2>Still Need a Website?</h2>
-            <p>We haven&rsquo;t forgotten our roots. Sobojinski Solutions still offers custom web design and SEO services for businesses that need a strong digital presence. <Link href="/contact" style={{ color: '#fff', textDecoration: 'underline' }}>Get in touch</Link> to discuss your project.</p>
+          <div className="content-block reveal">
+            <div className="content-block-text">
+              <div className="section-label" style={{ color: '#2563EB' }}>Design &amp; Development</div>
+              <h2>Custom Web Design</h2>
+              <p>We got our start building websites — and we still do it better than anyone. Whether you need a polished landing page, a full business website, or a custom e-commerce store, we craft every detail to match your brand and convert visitors into customers.</p>
+              <p>Fully responsive, SEO-friendly, and built with modern technology. No templates, no page builders — just clean, custom code designed for performance.</p>
+              <ul className="feature-list" style={{ listStyle: 'none', marginTop: '1.5rem' }}>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Custom responsive design</li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> E-commerce &amp; online stores</li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Landing pages &amp; lead generation</li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Content management systems</li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Performance optimization</li>
+              </ul>
+              <Link href="/contact" className="btn btn-primary" style={{ marginTop: '1.5rem' }}>Get a Quote</Link>
+            </div>
+            <div className="content-block-visual">
+              <div className="visual-card" style={{ borderTop: '4px solid #2563EB' }}>
+                <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+                  <rect x="25" y="20" width="150" height="100" rx="8" fill="#EFF6FF" stroke="#2563EB" strokeWidth="2" />
+                  <rect x="25" y="20" width="150" height="20" rx="8" fill="#2563EB" opacity="0.1" />
+                  <circle cx="40" cy="30" r="3" fill="#EF4444" />
+                  <circle cx="50" cy="30" r="3" fill="#F59E0B" />
+                  <circle cx="60" cy="30" r="3" fill="#22C55E" />
+                  <rect x="40" y="50" width="60" height="8" rx="4" fill="#2563EB" opacity="0.2" />
+                  <rect x="40" y="65" width="120" height="5" rx="2.5" fill="#CBD5E1" />
+                  <rect x="40" y="76" width="100" height="5" rx="2.5" fill="#CBD5E1" />
+                  <rect x="40" y="87" width="80" height="5" rx="2.5" fill="#CBD5E1" />
+                  <rect x="40" y="100" width="50" height="12" rx="6" fill="#2563EB" opacity="0.15" />
+                  <rect x="25" y="135" width="45" height="45" rx="6" fill="#EFF6FF" stroke="#2563EB" strokeWidth="1" opacity="0.6" />
+                  <rect x="78" y="135" width="45" height="45" rx="6" fill="#EFF6FF" stroke="#2563EB" strokeWidth="1" opacity="0.6" />
+                  <rect x="130" y="135" width="45" height="45" rx="6" fill="#EFF6FF" stroke="#2563EB" strokeWidth="1" opacity="0.6" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SEO Services */}
+      <section className="section bg-light" id="seo-services">
+        <div className="container">
+          <div className="content-block reversed reveal">
+            <div className="content-block-text">
+              <div className="section-label" style={{ color: '#F97316' }}>Search Optimization</div>
+              <h2>SEO Services</h2>
+              <p>Our data-driven SEO strategies get your business found by the right people at the right time. We combine technical expertise, content strategy, and proven tactics to boost your rankings and drive organic traffic that converts.</p>
+              <p>Backed by our 90-day ranking guarantee — we deliver measurable results, not empty promises.</p>
+              <ul className="feature-list" style={{ listStyle: 'none', marginTop: '1.5rem' }}>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Keyword research &amp; strategy</li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> On-page &amp; technical SEO</li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Link building &amp; outreach</li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Content strategy &amp; optimization</li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Monthly reporting &amp; analytics</li>
+              </ul>
+              <Link href="/contact" className="btn btn-primary" style={{ marginTop: '1.5rem', background: '#F97316', borderColor: '#F97316' }}>Get Started</Link>
+            </div>
+            <div className="content-block-visual">
+              <div className="visual-card" style={{ borderTop: '4px solid #F97316' }}>
+                <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+                  <rect x="25" y="30" width="150" height="140" rx="12" fill="#FFF7ED" stroke="#F97316" strokeWidth="2" />
+                  <circle cx="65" cy="65" r="20" fill="none" stroke="#F97316" strokeWidth="2" />
+                  <line x1="80" y1="80" x2="95" y2="95" stroke="#F97316" strokeWidth="3" strokeLinecap="round" />
+                  <rect x="110" y="55" width="50" height="6" rx="3" fill="#F97316" opacity="0.3" />
+                  <rect x="110" y="68" width="35" height="6" rx="3" fill="#CBD5E1" />
+                  <path d="M40 120 L65 105 L90 115 L115 90 L140 100 L165 85" stroke="#F97316" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                  <path d="M40 120 L65 105 L90 115 L115 90 L140 100 L165 85 L165 150 L40 150 Z" fill="#F97316" opacity="0.05" />
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
       </section>

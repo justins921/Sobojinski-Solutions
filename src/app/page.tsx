@@ -18,7 +18,7 @@ export default function HomePage() {
                 <span className="highlight">Modern Business</span>
               </h1>
               <p className="hero-subtitle fade-in-up delay-2">
-                We build specialized operating systems that solve real problems across healthcare, golf improvement, workforce management, and digital marketing.
+                We build specialized operating systems and deliver expert web design &amp; SEO services to solve real problems across healthcare, golf improvement, workforce management, and digital marketing.
               </p>
               <div className="hero-buttons fade-in-up delay-3">
                 <Link href="/products" className="btn btn-primary btn-lg">Explore Products</Link>
@@ -115,8 +115,39 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Services */}
+      <section className="section bg-light" id="services">
+        <div className="container">
+          <div className="section-header reveal">
+            <div className="section-label">Our Services</div>
+            <h2>Web Design &amp; SEO That Delivers</h2>
+            <p>Alongside our platform products, we offer custom web design and SEO services to help businesses establish and grow their digital presence.</p>
+          </div>
+          <div className="products-grid" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
+            <div className="product-card reveal" style={{ borderTop: '4px solid #2563EB' }}>
+              <div className="product-card-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
+              </div>
+              <h3>Custom Web Design</h3>
+              <span className="product-tag" style={{ background: '#EFF6FF', color: '#2563EB' }}>Design &amp; Development</span>
+              <p>Handcrafted, responsive websites that look great and convert visitors into customers. From landing pages to full e-commerce builds, we design and develop sites tailored to your brand and goals.</p>
+              <Link href="/contact" className="btn btn-outline">Get a Quote</Link>
+            </div>
+            <div className="product-card reveal" style={{ borderTop: '4px solid #F97316' }}>
+              <div className="product-card-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F97316" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /><line x1="11" y1="8" x2="11" y2="14" /><line x1="8" y1="11" x2="14" y2="11" /></svg>
+              </div>
+              <h3>SEO Services</h3>
+              <span className="product-tag" style={{ background: '#FFF7ED', color: '#F97316' }}>Search Optimization</span>
+              <p>Data-driven SEO strategies that get you found. We handle keyword research, on-page optimization, technical SEO, link building, and content strategy — backed by our proven 90-day ranking guarantee.</p>
+              <Link href="/contact" className="btn btn-outline">Get Started</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Sobojinski */}
-      <section className="section bg-light">
+      <section className="section">
         <div className="container">
           <div className="section-header reveal">
             <div className="section-label">Why Choose Us</div>
