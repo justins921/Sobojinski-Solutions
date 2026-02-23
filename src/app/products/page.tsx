@@ -74,7 +74,7 @@ export default function ProductsPage() {
                 <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Course condition tracking</li>
                 <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Tournament & event management</li>
               </ul>
-              <a href="https://golf.sobojinskisolutions.com" className="btn btn-primary" style={{ marginTop: '1.5rem', background: '#22C55E', borderColor: '#22C55E' }}>Visit Golf OS</a>
+              <a href="https://golfos.sobojinskisolutions.com" className="btn btn-primary" style={{ marginTop: '1.5rem', background: '#22C55E', borderColor: '#22C55E' }}>Visit Golf OS</a>
             </div>
             <div className="content-block-visual">
               <div className="visual-card" style={{ borderTop: '4px solid #22C55E' }}>

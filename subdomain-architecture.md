@@ -12,7 +12,7 @@ Sobojinski Solutions uses a subdomain strategy where the main hub site lives at 
 |--------|---------|---------|
 | `sobojinskisolutions.com` | Main hub/marketing site | Company brand |
 | `emros.sobojinskisolutions.com` | EMR OS product site | Electronic Medical Records |
-| `golf.sobojinskisolutions.com` | Golf OS product site | Golf Course Management |
+| `golfos.sobojinskisolutions.com` | Golf OS product site | Golf Course Management |
 | `workos.sobojinskisolutions.com` | Work OS product site | Workforce/Project Management |
 | `seoos.sobojinskisolutions.com` | SEO OS product site | SEO Management Platform |
 
@@ -21,13 +21,13 @@ Sobojinski Solutions uses a subdomain strategy where the main hub site lives at 
 The current naming convention uses descriptive, recognizable prefixes:
 
 - **emros** — Clear abbreviation for "EMR OS"
-- **golf** — Simple, memorable, directly tied to the industry
+- **golfos** — Clear abbreviation for "Golf OS", consistent with the naming pattern
 - **workos** — Clear abbreviation for "Work OS"
 - **seoos** — Clear abbreviation for "SEO OS"
 
 **Alternative naming suggestion:** If you want more uniform naming, consider:
 - `emr.sobojinskisolutions.com`
-- `golf.sobojinskisolutions.com`
+- `golfos.sobojinskisolutions.com`
 - `work.sobojinskisolutions.com`
 - `seo.sobojinskisolutions.com`
 
@@ -47,7 +47,7 @@ This shorter format is cleaner but may conflict with other uses (e.g., `work` co
 sobojinskisolutions.com        A       76.76.21.21
 www.sobojinskisolutions.com    CNAME   cname.vercel-dns.com
 emros.sobojinskisolutions.com  CNAME   cname.vercel-dns.com
-golf.sobojinskisolutions.com   CNAME   cname.vercel-dns.com
+golfos.sobojinskisolutions.com   CNAME   cname.vercel-dns.com
 workos.sobojinskisolutions.com CNAME   cname.vercel-dns.com
 seoos.sobojinskisolutions.com  CNAME   cname.vercel-dns.com
 ```
@@ -77,7 +77,7 @@ emros-product/                → Vercel Project: "ss-emros"
   └── domain: emros.sobojinskisolutions.com
 
 golf-product/                 → Vercel Project: "ss-golf"
-  └── domain: golf.sobojinskisolutions.com
+  └── domain: golfos.sobojinskisolutions.com
 
 workos-product/               → Vercel Project: "ss-workos"
   └── domain: workos.sobojinskisolutions.com

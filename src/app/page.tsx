@@ -91,7 +91,7 @@ export default function HomePage() {
               <h3>Golf OS</h3>
               <span className="product-tag">Golf Improvement</span>
               <p>Complete golf course and club management. Tee time bookings, member management, POS integration, and course operations all in one platform.</p>
-              <a href="https://golf.sobojinskisolutions.com" className="btn btn-outline">Learn More</a>
+              <a href="https://golfos.sobojinskisolutions.com" className="btn btn-outline">Learn More</a>
             </div>
             <div className="product-card product-card-work reveal">
               <div className="product-card-icon">

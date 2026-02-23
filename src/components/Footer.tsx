@@ -39,7 +39,7 @@ export default function Footer() {
             <h4>Products</h4>
             <ul className="footer-links">
               <li><a href="https://emros.sobojinskisolutions.com">EMR OS</a></li>
-              <li><a href="https://golf.sobojinskisolutions.com">Golf OS</a></li>
+              <li><a href="https://golfos.sobojinskisolutions.com">Golf OS</a></li>
               <li><a href="https://workos.sobojinskisolutions.com">Work OS</a></li>
               <li><a href="https://seoos.sobojinskisolutions.com">SEO OS</a></li>
             </ul>
@@ -56,6 +56,7 @@ export default function Footer() {
             <ul className="footer-links">
               <li><Link href="/about">About</Link></li>
               <li><Link href="/products">Products</Link></li>
+              <li><Link href="/portfolio">Portfolio</Link></li>
               <li><Link href="/contact">Contact</Link></li>
             </ul>
           </div>
