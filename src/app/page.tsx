@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import FaqAccordion from '@/components/FaqAccordion'
 
 export const metadata: Metadata = {
   title: 'Sobojinski Solutions | Custom Software, Websites & SEO',
@@ -35,9 +36,25 @@ export default function HomePage() {
         <div className="container">
           <div className="hero-grid">
             <div className="hero-content">
-              <div className="hero-badge fade-in-up">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1l2.2 4.4L15 6.3l-3.5 3.4.8 4.9L8 12.4l-4.3 2.2.8-4.9L1 6.3l4.8-.9L8 1z" fill="currentColor" /></svg>
-                Software, Websites &amp; SEO
+              <div className="trust-badges fade-in-up">
+                <span className="trust-badge">
+                  <span className="badge-check">
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                  </span>
+                  Real Products, Not Vaporware
+                </span>
+                <span className="trust-badge">
+                  <span className="badge-check">
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                  </span>
+                  Built by Hand
+                </span>
+                <span className="trust-badge">
+                  <span className="badge-check">
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                  </span>
+                  Direct Access to the Builder
+                </span>
               </div>
               <h1 className="fade-in-up delay-1">
                 Software That Works as{' '}
@@ -87,11 +104,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Brand Bar */}
-      <div className="brand-bar">
-        <span></span><span></span><span></span>
-      </div>
-
       {/* Products */}
       <section className="section" id="products">
         <div className="container">
@@ -103,7 +115,11 @@ export default function HomePage() {
 
           {/* EMR OS, flagship */}
           <div className="reveal" style={{ marginBottom: '2rem' }}>
-            <div className="product-card product-card-emr" style={{ maxWidth: '900px', margin: '0 auto', padding: '2.5rem' }}>
+            <div className="product-card" style={{ maxWidth: '900px', margin: '0 auto' }}>
+              <div className="card-visual visual-emr" style={{ height: '200px' }}>
+                <span className="visual-initial">EMR OS</span>
+              </div>
+              <div>
               <div className="flex" style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.75rem' }}>
                 <div className="product-card-icon">
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
@@ -119,11 +135,15 @@ export default function HomePage() {
                 <a href="https://emros.sobojinskisolutions.com" className="btn btn-primary">Visit EMR OS</a>
                 <Link href="/products" className="btn btn-outline">Full Details</Link>
               </div>
+              </div>
             </div>
           </div>
 
           <div className="products-grid">
-            <div className="product-card reveal" style={{ borderTop: '4px solid #F97316' }}>
+            <div className="product-card reveal">
+              <div className="card-visual visual-uss">
+                <span className="visual-initial">USS</span>
+              </div>
               <div className="product-card-icon" style={{ background: 'rgba(249, 115, 22, 0.1)', color: '#F97316' }}>
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
               </div>
@@ -132,7 +152,10 @@ export default function HomePage() {
               <p>Find ugly, outdated websites and turn them into web design clients. Built for freelancers and agencies who want a steady pipeline of prospects that clearly need help.</p>
               <a href="https://uglysitescraper.com" className="btn btn-outline" target="_blank" rel="noopener noreferrer">Learn More</a>
             </div>
-            <div className="product-card reveal" style={{ borderTop: '4px solid #2563EB' }}>
+            <div className="product-card reveal">
+              <div className="card-visual visual-dta">
+                <span className="visual-initial">DTA</span>
+              </div>
               <div className="product-card-icon" style={{ background: 'rgba(37, 99, 235, 0.1)', color: '#2563EB' }}>
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" /></svg>
               </div>
@@ -141,7 +164,10 @@ export default function HomePage() {
               <p>A voice-first personal memory app. Record what worked and what did not, then ask it later. Your own searchable history of decisions, lessons, and ideas.</p>
               <a href="https://dothatagain.app" className="btn btn-outline" target="_blank" rel="noopener noreferrer">Learn More</a>
             </div>
-            <div className="product-card reveal" style={{ borderTop: '4px solid #8B5CF6' }}>
+            <div className="product-card reveal">
+              <div className="card-visual visual-pen">
+                <span className="visual-initial">P</span>
+              </div>
               <div className="product-card-icon" style={{ background: 'rgba(139, 92, 246, 0.1)', color: '#8B5CF6' }}>
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /></svg>
               </div>
@@ -163,7 +189,10 @@ export default function HomePage() {
             <p>Fast, modern websites for local businesses and nonprofits. Designed to load quickly, rank well, and turn visitors into customers.</p>
           </div>
           <div className="products-grid">
-            <div className="product-card reveal" style={{ borderTop: '4px solid #2563EB' }}>
+            <div className="product-card reveal">
+              <div className="card-visual visual-fvpt">
+                <span className="visual-initial">FVPT</span>
+              </div>
               <div className="product-card-icon" style={{ background: 'rgba(37, 99, 235, 0.1)', color: '#2563EB' }}>
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
               </div>
@@ -172,7 +201,10 @@ export default function HomePage() {
               <p>Full website for a physical therapy clinic in Oshkosh, Wisconsin. Service pages, provider info, and online scheduling built for speed and local search.</p>
               <a href="https://foxvalleyphysicaltherapy.com" className="btn btn-outline" target="_blank" rel="noopener noreferrer">Visit Site</a>
             </div>
-            <div className="product-card reveal" style={{ borderTop: '4px solid #0EA5E9' }}>
+            <div className="product-card reveal">
+              <div className="card-visual visual-karni">
+                <span className="visual-initial">KP</span>
+              </div>
               <div className="product-card-icon" style={{ background: 'rgba(14, 165, 233, 0.1)', color: '#0EA5E9' }}>
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 20h20" /><path d="M4 20V10l8-6 8 6v10" /></svg>
               </div>
@@ -181,7 +213,10 @@ export default function HomePage() {
               <p>Website for a pier installation company. Migrated off an expensive page builder to a fast, modern site that the owner can afford to keep.</p>
               <a href="https://karnipier.com" className="btn btn-outline" target="_blank" rel="noopener noreferrer">Visit Site</a>
             </div>
-            <div className="product-card reveal" style={{ borderTop: '4px solid #10B981' }}>
+            <div className="product-card reveal">
+              <div className="card-visual visual-bikers">
+                <span className="visual-initial">BD</span>
+              </div>
               <div className="product-card-icon" style={{ background: 'rgba(16, 185, 129, 0.1)', color: '#10B981' }}>
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>
               </div>
@@ -190,7 +225,10 @@ export default function HomePage() {
               <p>Website for a Wisconsin nonprofit supporting injured motorcyclists. Clear mission pages, event info, and donation paths.</p>
               <a href="https://bikersdownwi.org" className="btn btn-outline" target="_blank" rel="noopener noreferrer">Visit Site</a>
             </div>
-            <div className="product-card reveal" style={{ borderTop: '4px solid #65A30D' }}>
+            <div className="product-card reveal">
+              <div className="card-visual visual-donwells">
+                <span className="visual-initial">DW</span>
+              </div>
               <div className="product-card-icon" style={{ background: 'rgba(101, 163, 13, 0.1)', color: '#65A30D' }}>
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22v-7" /><path d="M12 15a5 5 0 0 0-5-5H4a2 2 0 0 0 0 4h3" /><path d="M12 15a5 5 0 0 1 5-5h3a2 2 0 0 1 0 4h-3" /></svg>
               </div>
@@ -198,6 +236,44 @@ export default function HomePage() {
               <span className="product-tag" style={{ background: 'rgba(101, 163, 13, 0.1)', color: '#4D7C0F' }}>Local Service Website</span>
               <p>Website for a lawn care and snow removal business. Service listings, quote requests, and local SEO that brings in seasonal work.</p>
               <Link href="/contact" className="btn btn-outline">Get a Site Like This</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet the Builder */}
+      <section className="section" id="builder">
+        <div className="container">
+          <div className="builder-grid reveal">
+            <div className="builder-photo">
+              <span className="builder-initials">JS</span>
+            </div>
+            <div className="builder-content">
+              <div className="section-label">Meet the Builder</div>
+              <h2>Hey, I&rsquo;m Justin</h2>
+              <p>I&rsquo;m the founder of Sobojinski Solutions, and I build everything here myself. Every product, every client website, every custom tool. When you work with me, you talk directly to the person writing the code.</p>
+              <p>No account managers, no handoffs, no junior developers learning on your dime. Just one person who cares about shipping software that works.</p>
+              <ul className="builder-points">
+                <li>
+                  <span className="point-check">
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                  </span>
+                  You work directly with the builder, start to finish
+                </li>
+                <li>
+                  <span className="point-check">
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                  </span>
+                  Real products that ship, not slide decks and roadmaps
+                </li>
+                <li>
+                  <span className="point-check">
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                  </span>
+                  Honest about what software can and cannot do for you
+                </li>
+              </ul>
+              <Link href="/about" className="btn btn-outline">More About Us</Link>
             </div>
           </div>
         </div>
@@ -257,6 +333,77 @@ export default function HomePage() {
               <p>Data-driven SEO that gets you found. Keyword research, on-page optimization, technical SEO, and content strategy for local businesses that depend on Google for customers.</p>
               <Link href="/contact" className="btn btn-outline">Get Started</Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Work With Us */}
+      <section className="section bg-light" id="why-us">
+        <div className="container">
+          <div className="section-header reveal">
+            <div className="section-label">Why Sobojinski Solutions</div>
+            <h2>Why Work With Us?</h2>
+            <p>Plenty of people sell websites and software. Here is what makes us different.</p>
+          </div>
+          <div className="why-grid">
+            <ul className="why-list reveal">
+              <li>
+                <span className="why-check">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                </span>
+                <div className="why-text">
+                  <strong>Real products, not promises</strong>
+                  <span>Everything we sell exists and works today. We do not pitch roadmaps or vaporware.</span>
+                </div>
+              </li>
+              <li>
+                <span className="why-check">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                </span>
+                <div className="why-text">
+                  <strong>One person, full accountability</strong>
+                  <span>No layers, no finger-pointing. If something is wrong, you know exactly who fixes it.</span>
+                </div>
+              </li>
+              <li>
+                <span className="why-check">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                </span>
+                <div className="why-text">
+                  <strong>Built for speed</strong>
+                  <span>Hand-coded sites and software with no bloat. Fast load times, fast iterations, fast answers.</span>
+                </div>
+              </li>
+            </ul>
+            <ul className="why-list reveal">
+              <li>
+                <span className="why-check">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                </span>
+                <div className="why-text">
+                  <strong>Honest pricing</strong>
+                  <span>EMR OS is one flat price with everything included. Client work is quoted straight, no surprise add-ons.</span>
+                </div>
+              </li>
+              <li>
+                <span className="why-check">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                </span>
+                <div className="why-text">
+                  <strong>Small business focused</strong>
+                  <span>We build for the businesses that get ignored by big agencies: local shops, clinics, contractors, nonprofits.</span>
+                </div>
+              </li>
+              <li>
+                <span className="why-check">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                </span>
+                <div className="why-text">
+                  <strong>We use what we sell</strong>
+                  <span>Our own business runs on the same approach we sell to clients. We eat our own cooking.</span>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -322,6 +469,18 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section" id="faq">
+        <div className="container">
+          <div className="section-header reveal">
+            <div className="section-label">FAQ</div>
+            <h2>Frequently Asked Questions</h2>
+            <p>Straight answers to the questions we hear most.</p>
+          </div>
+          <FaqAccordion />
         </div>
       </section>
 

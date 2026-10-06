@@ -34,13 +34,7 @@ export default function Navbar() {
     <nav className={`nav${scrolled ? ' scrolled' : ''}`} role="navigation" aria-label="Main navigation">
       <div className="nav-inner">
         <Link href="/" className="nav-logo" aria-label="Sobojinski Solutions - Home">
-          <svg className="nav-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="40" height="40" rx="10" fill="#0F172A" />
-            <path d="M12 14h6v6h-6z" fill="#2563EB" />
-            <path d="M22 14h6v6h-6z" fill="#10B981" />
-            <path d="M12 24h6v6h-6z" fill="#8B5CF6" />
-            <path d="M22 24h6v6h-6z" fill="#F97316" />
-          </svg>
+          <img src="/logo.jpg" alt="Sobojinski Solutions" className="nav-logo-icon" width={40} height={40} />
           <div className="nav-logo-text">
             Sobojinski
             <span>Solutions</span>

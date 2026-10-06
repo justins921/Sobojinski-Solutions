@@ -11,19 +11,14 @@
 
 ## Logo
 
-The Sobojinski Solutions logo is a rounded square containing a 2x2 grid of colored squares. Each square represents one of the four product platforms:
-
-- **Top-left (Blue #2563EB):** Sobojinski Solutions core brand
-- **Top-right (Emerald #10B981):** EMR OS
-- **Bottom-left (Violet #8B5CF6):** Work OS
-- **Bottom-right (Orange #F97316):** SEO OS
+The Sobojinski Solutions logo is a blue circle with a white "SS" monogram and "Sobojinski Solutions" wordmark. The logo file is located at `/public/logo.jpg`.
 
 ### Logo Usage
-- Minimum clear space: 1x the width of one inner square on all sides
+- The source image is square; display with `border-radius: 50%` and `object-fit: cover` for a clean circular crop
+- Recommended display size: 40px in navigation, 40px in footer
 - Minimum size: 32px height for digital, 12mm for print
 - Always use the logo on contrasting backgrounds
 - Do not stretch, rotate, or alter the logo colors
-- The logo file is located at `/brand/logo.svg`
 
 ---
 
@@ -60,9 +55,9 @@ Each product has its own accent color. Subdomain projects should use their produ
 | Product | Primary | Dark | Usage |
 |---------|---------|------|-------|
 | EMR OS | `#10B981` | `#059669` | Healthcare/medical contexts |
-| Golf OS | `#22C55E` | `#16A34A` | Golf/hospitality contexts |
-| Work OS | `#8B5CF6` | `#7C3AED` | Productivity/workspace contexts |
-| SEO OS | `#F97316` | `#EA580C` | Marketing/analytics contexts |
+| Ugly Site Scraper | `#F97316` | `#C2410C` | Lead generation contexts |
+| DoThatAgain | `#2563EB` | `#1D4ED8` | App/product contexts |
+| Penelope | `#8B5CF6` | `#7C3AED` | AI/sales contexts |
 
 ### Semantic Colors
 | Name | Hex | Usage |
@@ -211,11 +206,4 @@ Subdomain projects should override the product accent variable:
 
 ## Brand Bar
 
-A thin (4px) horizontal bar with 4 equal segments showing the product colors is used as a visual brand element:
-
-1. Brand Blue (`#2563EB`)
-2. EMR Emerald (`#10B981`)
-3. Work Violet (`#8B5CF6`)
-4. SEO Orange (`#F97316`)
-
-Use this at the top of footers or as section dividers.
+Retired. The brand bar element referenced discontinued products and has been removed from the site.

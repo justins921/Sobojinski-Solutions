@@ -3,20 +3,11 @@ import Link from 'next/link'
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="brand-bar">
-        <span></span><span></span><span></span>
-      </div>
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
             <Link href="/" className="nav-logo" style={{ marginBottom: '0.5rem' }}>
-              <svg className="nav-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect width="40" height="40" rx="10" fill="#1E293B" />
-                <path d="M12 14h6v6h-6z" fill="#2563EB" />
-                <path d="M22 14h6v6h-6z" fill="#10B981" />
-                <path d="M12 24h6v6h-6z" fill="#8B5CF6" />
-                <path d="M22 24h6v6h-6z" fill="#F97316" />
-              </svg>
+              <img src="/logo.jpg" alt="Sobojinski Solutions" className="nav-logo-icon" width={40} height={40} />
               <div className="nav-logo-text" style={{ color: '#F8FAFC' }}>
                 Sobojinski
                 <span>Solutions</span>

@@ -13,6 +13,8 @@ const projects = [
     description: 'Electronic medical records built for independent physical therapy practices. Scheduling, documentation, billing, and patient engagement in one system, with AI billing tools for underpayment detection, denial-risk scoring, documentation-to-code review, and appeal drafts. $175 per provider per month, everything included.',
     tags: ['Platform', 'Healthcare'],
     color: '#10B981',
+    gradient: 'visual-emr',
+    initials: 'EMR',
     url: 'https://emros.sobojinskisolutions.com',
     results: 'Flagship product, in active development with a pilot clinic.',
   },
@@ -22,6 +24,8 @@ const projects = [
     description: 'Full website for a physical therapy clinic in Oshkosh, Wisconsin. Service pages, provider info, and online scheduling built for speed and local search.',
     tags: ['Client Site', 'Web Design'],
     color: '#2563EB',
+    gradient: 'visual-fvpt',
+    initials: 'FVPT',
     url: 'https://foxvalleyphysicaltherapy.com',
     results: 'Live client site.',
   },
@@ -31,6 +35,8 @@ const projects = [
     description: 'Website for a pier installation company. Migrated off an expensive page builder to a fast, modern site that the owner can afford to keep.',
     tags: ['Client Site', 'Web Design'],
     color: '#0EA5E9',
+    gradient: 'visual-karni',
+    initials: 'KP',
     url: 'https://karnipier.com',
     results: 'Live client site.',
   },
@@ -40,6 +46,8 @@ const projects = [
     description: 'Website for a Wisconsin nonprofit supporting injured motorcyclists. Clear mission pages, event info, and donation paths.',
     tags: ['Client Site', 'Web Design'],
     color: '#8B5CF6',
+    gradient: 'visual-bikers',
+    initials: 'BD',
     url: 'https://bikersdownwi.org',
     results: 'Live client site.',
   },
@@ -49,6 +57,8 @@ const projects = [
     description: 'Website for a lawn care and snow removal business. Service listings, quote requests, and local SEO that brings in seasonal work.',
     tags: ['Client Site', 'Web Design'],
     color: '#65A30D',
+    gradient: 'visual-donwells',
+    initials: 'DW',
     url: '',
     results: 'Ongoing client.',
   },
@@ -58,6 +68,8 @@ const projects = [
     description: 'Custom e-commerce website for a natural products brand. Built with a focus on clean UX, fast load times, and seamless checkout. Includes product filtering, inventory management integration, and mobile-first responsive design.',
     tags: ['Web Design', 'E-Commerce', 'SEO'],
     color: '#10B981',
+    gradient: 'visual-emr',
+    initials: 'CS',
     url: 'https://cedarsense.com',
     results: 'Increased online sales by 40% within the first 3 months of launch.',
   },
@@ -67,6 +79,8 @@ const projects = [
     description: 'Full website redesign and SEO campaign for a Wisconsin-based hemp products company. Rebuilt the site for speed and conversions, then executed a comprehensive SEO strategy targeting local and national keywords.',
     tags: ['Web Design', 'SEO', 'Local SEO'],
     color: '#22C55E',
+    gradient: 'visual-bikers',
+    initials: 'HW',
     url: 'https://hempworkswi.com',
     results: 'Page 1 Google rankings achieved within 90 days for primary keywords.',
   },
@@ -91,16 +105,8 @@ export default function PortfolioPage() {
           <div className="portfolio-grid">
             {projects.map((project) => (
               <div key={project.name} className="portfolio-card reveal">
-                <div className="portfolio-card-preview" style={{ borderTop: `4px solid ${project.color}` }}>
-                  <div className="portfolio-card-icon" style={{ color: project.color }}>
-                    {project.tags.includes('Platform') ? (
-                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" /><path d="M8 21h8m-4-4v4" /><path d="M7 8h3m-3 3h5" /></svg>
-                    ) : project.tags.includes('SEO') && !project.tags.includes('Web Design') ? (
-                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /><path d="M11 8v6m-3-3h6" /></svg>
-                    ) : (
-                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" /><path d="M8 21h8m-4-4v4" /><circle cx="12" cy="10" r="0.5" fill="currentColor" /></svg>
-                    )}
-                  </div>
+                <div className={`card-visual ${project.gradient}`}>
+                  <span className="visual-initial">{project.initials}</span>
                 </div>
                 <div className="portfolio-card-content">
                   <div className="portfolio-card-type" style={{ color: project.color }}>{project.type}</div>
