@@ -174,7 +174,7 @@ export default function HomePage() {
           <div className="section-header reveal">
             <div className="section-label">More Products</div>
             <h2>Small tools that do one job well</h2>
-            <p>Every product below is live or in active development. We do not sell ideas or roadmaps.</p>
+            <p>Every product below is live or in active development. I do not sell ideas or roadmaps.</p>
           </div>
           <div className="shot-grid">
             <div className="shot-card reveal">
@@ -274,7 +274,7 @@ export default function HomePage() {
                 <li><Check /> Real products that ship, not slide decks and roadmaps</li>
                 <li><Check /> Honest about what software can and cannot do for you</li>
               </ul>
-              <Link href="/about" className="btn btn-outline">More About Us</Link>
+              <Link href="/about" className="btn btn-outline">More About Me</Link>
             </div>
           </div>
         </div>
@@ -288,12 +288,12 @@ export default function HomePage() {
               <div className="section-label">Custom Tools</div>
               <h2>Need a tool that does exactly what you need?</h2>
               <p className="lead">
-                We build one-off web tools for businesses: calculators, estimators,
+                I build one-off web tools for businesses: calculators, estimators,
                 quoting widgets, internal dashboards. Small, focused tools that do one
                 job well and live on your website.
               </p>
               <p>
-                We also publish free tools anyone can use. Try our{' '}
+                I also publish free tools anyone can use. Try our{' '}
                 <a href="https://generatorwattage.com" target="_blank" rel="noopener noreferrer" className="inline-link">
                   generator sizing calculator
                 </a>{' '}

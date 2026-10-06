@@ -13,7 +13,7 @@ export default function AboutPage() {
         <div className="container">
           <div className="section-label fade-in-up">Our Story</div>
           <h1 className="fade-in-up delay-1">From Web Design to<br />Business Solutions</h1>
-          <p className="fade-in-up delay-2">We started building websites. Now we build the operating systems that power modern businesses.</p>
+          <p className="fade-in-up delay-2">I started building websites. Now I build software that power modern businesses.</p>
         </div>
       </section>
 
@@ -22,7 +22,7 @@ export default function AboutPage() {
         <div className="container">
           <div className="mission-block reveal">
             <h2>Creating Solutions for Your Business Needs</h2>
-            <p>Sobojinski Solutions builds real software products and designs websites for small businesses. Our flagship product is EMR OS for physical therapy clinics, alongside tools like Ugly Site Scraper and DoThatAgain, plus custom web design, SEO, and one-off web tools built for specific business needs.</p>
+            <p>Sobojinski Solutions builds real software products and designs websites for small businesses. My flagship product is EMR OS for physical therapy clinics, alongside tools like Ugly Site Scraper and DoThatAgain, plus custom web design, SEO, and one-off web tools built for specific business needs.</p>
           </div>
         </div>
       </section>
@@ -32,9 +32,9 @@ export default function AboutPage() {
         <div className="container">
           <div className="content-block reveal">
             <div className="content-block-text">
-              <div className="section-label">Our Evolution</div>
+              <div className="section-label">My Evolution</div>
               <h2>Building Better, Step by Step</h2>
-              <p>What started as a passion for crafting websites evolved into something bigger, a mission to build software that solves real business problems across industries.</p>
+              <p>What started as my passion for crafting websites evolved into something bigger, my mission to build software that solves real business problems across industries.</p>
             </div>
             <div>
               <div className="timeline">
@@ -42,19 +42,19 @@ export default function AboutPage() {
                   <div className="timeline-dot"></div>
                   <div className="timeline-year">The Beginning</div>
                   <h4>Web Design Agency</h4>
-                  <p>Sobojinski Solutions launched as a custom web design and SEO agency, helping small businesses establish their digital presence with handcrafted websites.</p>
+                  <p>I launched Sobojinski Solutions as a one-person custom web design and SEO shop, helping small businesses establish their digital presence with handcrafted websites.</p>
                 </div>
                 <div className="timeline-item past">
                   <div className="timeline-dot"></div>
                   <div className="timeline-year">The Pivot</div>
                   <h4>Identifying Gaps</h4>
-                  <p>Working with clients across healthcare, golf, and other industries, we saw the same pattern: businesses stuck with clunky, outdated software that didn&rsquo;t fit their needs.</p>
+                  <p>I have worked with clients across healthcare, golf, and other industries, I saw the same pattern: businesses stuck with clunky, outdated software that didn&rsquo;t fit their needs.</p>
                 </div>
                 <div className="timeline-item">
                   <div className="timeline-dot"></div>
                   <div className="timeline-year">Today</div>
                   <h4>Business Solutions Company</h4>
-                  <p>We&rsquo;re building real software products, EMR OS for physical therapy clinics, Ugly Site Scraper for lead generation, and DoThatAgain for personal memory, while continuing to deliver the custom web design and SEO services where it all started.</p>
+                  <p>I am building real software products, EMR OS for physical therapy clinics, Ugly Site Scraper for lead generation, and DoThatAgain for personal memory, while continuing to deliver the custom web design and SEO services where it all started.</p>
                 </div>
                 <div className="timeline-item">
                   <div className="timeline-dot"></div>
@@ -72,9 +72,9 @@ export default function AboutPage() {
       <section className="section">
         <div className="container">
           <div className="section-header reveal">
-            <div className="section-label">Our Values</div>
-            <h2>What Drives Us</h2>
-            <p>These principles guide every product we build and every decision we make.</p>
+            <div className="section-label">My Values</div>
+            <h2>What Drives Me</h2>
+            <p>These principles guide every product I build and every decision I make.</p>
           </div>
           <div className="team-values-grid">
             <div className="team-value-card reveal">
@@ -82,28 +82,28 @@ export default function AboutPage() {
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
               </div>
               <h4>Purpose Over Features</h4>
-              <p>We build what businesses actually need, not what looks impressive on a features page. Every feature earns its place.</p>
+              <p>I build what businesses actually need, not what looks impressive on a features page. Every feature earns its place.</p>
             </div>
             <div className="team-value-card reveal">
               <div className="value-icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
               </div>
               <h4>Direct Communication</h4>
-              <p>No jargon, no layers of account managers. You work directly with the people building your platform.</p>
+              <p>No jargon, no account managers. You work directly with me, the person building your software.</p>
             </div>
             <div className="team-value-card reveal">
               <div className="value-icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
               </div>
               <h4>Quality Engineering</h4>
-              <p>Modern technology, clean code, and thoughtful design. We build fast, reliable software that our users can trust.</p>
+              <p>Modern technology, clean code, and thoughtful design. I build fast, reliable software you can trust.</p>
             </div>
             <div className="team-value-card reveal">
               <div className="value-icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
               </div>
               <h4>Long-Term Thinking</h4>
-              <p>We don&rsquo;t ship and forget. Our platforms evolve with the industries they serve, growing better over time.</p>
+              <p>I don&rsquo;t ship and forget. My products evolve with the industries they serve, growing better over time.</p>
             </div>
           </div>
         </div>
@@ -114,11 +114,11 @@ export default function AboutPage() {
         <div className="container">
           <div className="content-block reversed reveal">
             <div className="content-block-text">
-              <div className="section-label">The Team</div>
-              <h2>Small Team, Big Impact</h2>
-              <p>Sobojinski Solutions is led by Justin, who brings a hands-on approach to every project. From strategy to architecture to implementation, you get direct access to the person making the decisions.</p>
-              <p>We&rsquo;re intentionally lean. That means faster iteration, stronger accountability, and zero bureaucracy between your needs and our solutions.</p>
-              <Link href="/contact" className="btn btn-primary" style={{ marginTop: '1rem' }}>Work With Us</Link>
+              <div className="section-label">Just Me</div>
+              <h2>One Person, Full Stack</h2>
+              <p>Sobojinski Solutions is just me, Justin. Founder, owner, builder, and everything in between. From strategy to architecture to implementation, you get direct access to the person making every decision.</p>
+              <p>I&rsquo;m intentionally solo. That means faster iteration, stronger accountability, and zero bureaucracy between your needs and the solution.</p>
+              <Link href="/contact" className="btn btn-primary" style={{ marginTop: '1rem' }}>Work With Me</Link>
             </div>
             <div className="content-block-visual">
               <div className="visual-card">
