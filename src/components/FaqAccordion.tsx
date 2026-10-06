@@ -1,7 +1,5 @@
 'use client'
 
-import { useState } from 'react'
-
 const faqs = [
   {
     q: 'What is EMR OS?',
@@ -13,7 +11,7 @@ const faqs = [
   },
   {
     q: 'What does a website cost?',
-    a: 'Every project is different, so we quote based on what you need. A simple business site costs less than a full e-commerce build. Tell us about your project through the contact form and we will give you a straight answer with no pressure.',
+    a: 'Every project is different, so we quote based on what you need. A simple business site costs less than a full e-commerce build. Try our project estimator for a rough range, then tell us about your project through the contact form and we will give you a straight answer with no pressure.',
   },
   {
     q: 'Do you offer SEO services?',
@@ -25,7 +23,7 @@ const faqs = [
   },
   {
     q: 'Who builds the projects?',
-    a: 'Every project is designed and built by Justin Sobojinski directly. There are no account managers, no handoffs, and no junior developers learning on your dime. You talk to the person building your software.',
+    a: 'Every project is designed and built by Justin Sobojinski directly, using AI-assisted development to ship faster and iterate quickly. There are no account managers, no handoffs, and no junior developers learning on your dime. You talk to the person building your software.',
   },
   {
     q: 'What is Ugly Site Scraper?',
@@ -38,21 +36,14 @@ const faqs = [
 ]
 
 export default function FaqAccordion() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0)
-
   return (
     <div className="faq-list">
       {faqs.map((faq, i) => (
-        <div key={i} className={`faq-item reveal${openIndex === i ? ' open' : ''}`}>
-          <button
-            className="faq-question"
-            onClick={() => setOpenIndex(i)}
-            aria-expanded={openIndex === i}
-          >
+        <div key={i} className="faq-item reveal open">
+          <div className="faq-question" style={{ cursor: 'default' }}>
             {faq.q}
-            <span className="faq-toggle">+</span>
-          </button>
-          <div className="faq-answer">
+          </div>
+          <div className="faq-answer" style={{ maxHeight: 'none' }}>
             <p>{faq.a}</p>
           </div>
         </div>

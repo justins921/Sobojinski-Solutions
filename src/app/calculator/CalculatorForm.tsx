@@ -14,15 +14,43 @@ const PROJECT_TYPES: { id: ProjectType; label: string; desc: string; base: numbe
   { id: 'seo', label: 'SEO Campaign', desc: 'Ongoing search optimization', base: 500, perPage: 0, monthly: true },
 ]
 
-const FEATURES: { id: string; label: string; desc: string; cost: number; monthlyCost?: number }[] = [
-  { id: 'contact', label: 'Contact form', desc: 'Quote requests, callbacks', cost: 200 },
-  { id: 'blog', label: 'Blog / news section', desc: 'Publish updates and articles', cost: 400 },
-  { id: 'checkout', label: 'E-commerce checkout', desc: 'Sell products online', cost: 1500 },
-  { id: 'accounts', label: 'User accounts / login', desc: 'Members or customer portals', cost: 1200 },
-  { id: 'dashboard', label: 'Custom dashboard', desc: 'Admin panel or reporting', cost: 2000 },
-  { id: 'api', label: 'API integrations', desc: 'Connect to other software', cost: 800 },
-  { id: 'ai', label: 'AI features', desc: 'Chat, generation, or analysis', cost: 1500 },
-]
+const FEATURES: Record<ProjectType, { id: string; label: string; desc: string; cost: number }[]> = {
+  website: [
+    { id: 'contact', label: 'Contact / quote form', desc: 'Quote requests, callbacks', cost: 200 },
+    { id: 'blog', label: 'Blog / news section', desc: 'Publish updates and articles', cost: 400 },
+    { id: 'gallery', label: 'Photo / project gallery', desc: 'Showcase your work', cost: 300 },
+    { id: 'booking', label: 'Online booking / scheduling', desc: 'Let customers book appointments', cost: 800 },
+    { id: 'aichat', label: 'AI chat assistant', desc: 'Answer visitor questions automatically', cost: 900 },
+  ],
+  ecommerce: [
+    { id: 'catalog', label: 'Large product catalog', desc: '100+ products with filtering', cost: 800 },
+    { id: 'accounts', label: 'Customer accounts', desc: 'Order history, saved carts', cost: 900 },
+    { id: 'coupons', label: 'Discounts / coupon codes', desc: 'Sales and promotions', cost: 400 },
+    { id: 'inventory', label: 'Inventory sync', desc: 'Connect to your POS or warehouse', cost: 1200 },
+    { id: 'aidesc', label: 'AI product descriptions', desc: 'Auto-generated SEO-friendly copy', cost: 700 },
+  ],
+  webapp: [
+    { id: 'accounts', label: 'User accounts / login', desc: 'Members or customer portals', cost: 1200 },
+    { id: 'dashboard', label: 'Custom dashboard', desc: 'Admin panel or reporting', cost: 2000 },
+    { id: 'api', label: 'API integrations', desc: 'Connect to other software', cost: 800 },
+    { id: 'notifications', label: 'Email / SMS notifications', desc: 'Automated alerts and reminders', cost: 600 },
+    { id: 'uploads', label: 'File uploads / storage', desc: 'Documents, images, or media', cost: 700 },
+    { id: 'ai', label: 'AI features', desc: 'Chat, generation, or analysis', cost: 1500 },
+  ],
+  tool: [
+    { id: 'embed', label: 'Embeddable widget', desc: 'Drop it into your existing site', cost: 300 },
+    { id: 'pdf', label: 'PDF export', desc: 'Downloadable results or quotes', cost: 400 },
+    { id: 'api', label: 'API integration', desc: 'Pull live data from another service', cost: 800 },
+    { id: 'ai', label: 'AI-powered results', desc: 'Smart calculations or recommendations', cost: 1000 },
+  ],
+  seo: [
+    { id: 'keywords', label: 'Keyword research', desc: 'Find what customers search for', cost: 0 },
+    { id: 'content', label: 'Content writing', desc: '4 SEO articles per month', cost: 400 },
+    { id: 'technical', label: 'Technical SEO audit + fixes', desc: 'Speed, structure, errors', cost: 600 },
+    { id: 'local', label: 'Local SEO', desc: 'Google Business Profile + citations', cost: 300 },
+    { id: 'reporting', label: 'Monthly reporting call', desc: 'Review rankings and traffic', cost: 200 },
+  ],
+}
 
 const TIMELINES: { id: Timeline; label: string; desc: string; modifier: number }[] = [
   { id: 'standard', label: 'Standard', desc: '4 to 6 weeks', modifier: 1 },
@@ -42,6 +70,12 @@ export default function CalculatorForm() {
 
   const type = PROJECT_TYPES.find((t) => t.id === projectType)!
   const showPages = type.perPage > 0
+  const availableFeatures = FEATURES[projectType]
+
+  function selectType(id: ProjectType) {
+    setProjectType(id)
+    setSelectedFeatures([])
+  }
 
   function toggleFeature(id: string) {
     setSelectedFeatures((prev) =>
@@ -52,7 +86,7 @@ export default function CalculatorForm() {
   const { low, high, monthly } = useMemo(() => {
     let estimate = type.base
     if (showPages) estimate += pages * type.perPage
-    for (const f of FEATURES) {
+    for (const f of availableFeatures) {
       if (selectedFeatures.includes(f.id)) estimate += f.cost
     }
     estimate *= TIMELINES.find((t) => t.id === timeline)!.modifier
@@ -61,7 +95,7 @@ export default function CalculatorForm() {
       high: estimate * 1.2,
       monthly: type.monthly,
     }
-  }, [type, pages, selectedFeatures, timeline, showPages])
+  }, [type, pages, selectedFeatures, timeline, showPages, availableFeatures])
 
   return (
     <div className="calc-grid">
@@ -75,7 +109,7 @@ export default function CalculatorForm() {
                 key={t.id}
                 type="button"
                 className={`calc-option${projectType === t.id ? ' selected' : ''}`}
-                onClick={() => setProjectType(t.id)}
+                onClick={() => selectType(t.id)}
                 aria-pressed={projectType === t.id}
               >
                 <span className="calc-option-label">{t.label}</span>
@@ -112,7 +146,7 @@ export default function CalculatorForm() {
         <div className="calc-group">
           <h3>What features do you need?</h3>
           <div className="calc-features">
-            {FEATURES.map((f) => (
+            {availableFeatures.map((f) => (
               <label key={f.id} className={`calc-feature${selectedFeatures.includes(f.id) ? ' selected' : ''}`}>
                 <input
                   type="checkbox"
@@ -161,6 +195,12 @@ export default function CalculatorForm() {
           <p className="calc-result-note">
             This is a rough ballpark based on typical projects. Every project is different,
             so the real number depends on the details.
+          </p>
+          <p className="calc-result-note" style={{ marginTop: '0.75rem' }}>
+            Third-party tools and services your project needs (hosting, domains, payment
+            processing, AI API usage, premium plugins) are billed separately and paid
+            directly by you. We will tell you what is needed and what it costs before
+            we start.
           </p>
           <Link href="/contact" className="btn btn-primary btn-lg calc-result-cta">
             Get an Exact Quote

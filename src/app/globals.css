@@ -192,7 +192,7 @@ p {
 .nav-dropdown-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 0.75rem);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   min-width: 300px;
@@ -201,8 +201,18 @@ p {
   border-radius: 1rem;
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
   padding: 0.5rem;
+  padding-top: 0.75rem;
   list-style: none;
   z-index: 100;
+}
+/* Invisible bridge so the menu doesn't close when moving mouse from toggle to menu */
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -0.75rem;
+  left: 0;
+  right: 0;
+  height: 0.75rem;
 }
 .nav-dropdown.open .nav-dropdown-menu { display: block; }
 .nav-dropdown-menu a {
