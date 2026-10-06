@@ -258,7 +258,7 @@ export default function HomePage() {
         <div className="container">
           <div className="builder-card reveal">
             <div className="builder-photo">
-              <span className="builder-initials">JS</span>
+              <img src="/justin.jpg" alt="Justin Sobojinski, founder of Sobojinski Solutions" />
             </div>
             <div className="builder-content">
               <div className="section-label">Meet the Builder</div>
