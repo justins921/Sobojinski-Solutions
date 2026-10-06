@@ -227,6 +227,92 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ============ IN THE LAB ============ */}
+      <section className="section" id="lab">
+        <div className="container">
+          <div className="section-header reveal">
+            <div className="section-label">In the Lab</div>
+            <h2>Experiments, demos, and side projects</h2>
+            <p>Not products yet, just ideas I am exploring or building. If one of these sparks an idea for your business, let us talk about building it for real.</p>
+          </div>
+          <div className="shot-grid">
+            <div className="shot-card reveal">
+              <BrowserFrame src="/screenshots/lab-sitekeep.png" alt="SiteKeep concept: website monitoring dashboard" />
+              <div className="shot-card-body">
+                <span className="shot-tag">Parked</span>
+                <h3>SiteKeep</h3>
+                <p>Website monitoring with uptime tracking, speed checks, and a 0 to 100 Keep Score for client sites.</p>
+              </div>
+            </div>
+            <div className="shot-card reveal">
+              <BrowserFrame src="/screenshots/lab-storage.png" alt="Storage Manager concept: storage facility management" />
+              <div className="shot-card-body">
+                <span className="shot-tag">In Development</span>
+                <h3>Storage Manager</h3>
+                <p>Self-storage facility software: unit maps, tenant management, and payment tracking.</p>
+              </div>
+            </div>
+            <div className="shot-card reveal">
+              <BrowserFrame src="/screenshots/lab-propman.png" alt="Property Manager Accountability concept" />
+              <div className="shot-card-body">
+                <span className="shot-tag">Concept</span>
+                <h3>Property Manager Accountability</h3>
+                <p>Track maintenance requests, tenant communication, and hold property managers accountable.</p>
+              </div>
+            </div>
+            <div className="shot-card reveal">
+              <BrowserFrame src="/screenshots/lab-workos.png" alt="Work OS concept: team task board" />
+              <div className="shot-card-body">
+                <span className="shot-tag">Early Build</span>
+                <h3>Work OS</h3>
+                <p>Simple team task tracking without the bloat of enterprise project management tools.</p>
+              </div>
+            </div>
+            <div className="shot-card reveal">
+              <BrowserFrame src="/screenshots/lab-emailos.png" alt="Email OS concept: email marketing dashboard" />
+              <div className="shot-card-body">
+                <span className="shot-tag">Concept</span>
+                <h3>Email OS</h3>
+                <p>Email marketing without the enterprise price tag: campaigns, templates, and analytics.</p>
+              </div>
+            </div>
+            <div className="shot-card reveal">
+              <BrowserFrame src="/screenshots/lab-seoos.png" alt="SEO OS concept: SEO dashboard" />
+              <div className="shot-card-body">
+                <span className="shot-tag">Concept</span>
+                <h3>SEO OS</h3>
+                <p>Keyword tracking, site audits, and competitor analysis in one straightforward dashboard.</p>
+              </div>
+            </div>
+            <div className="shot-card reveal">
+              <BrowserFrame src="/screenshots/lab-mytime.png" alt="MyTime concept: freelancer time tracking" />
+              <div className="shot-card-body">
+                <span className="shot-tag">Concept</span>
+                <h3>MyTime</h3>
+                <p>Time tracking for freelancers. Deliberately no invoicing, just clean time records.</p>
+              </div>
+            </div>
+            <div className="shot-card reveal">
+              <BrowserFrame src="/screenshots/lab-weather.png" alt="Golf Weather concept app" />
+              <div className="shot-card-body">
+                <span className="shot-tag">Concept</span>
+                <h3>Golf Weather</h3>
+                <p>Hyperlocal weather for golfers: wind, conditions, and go or no-go recommendations.</p>
+              </div>
+            </div>
+            <div className="shot-card reveal">
+              <BrowserFrame src="/screenshots/lab-pickem.png" alt="NFL Pick'em concept app" />
+              <div className="shot-card-body">
+                <span className="shot-tag">Just for Fun</span>
+                <h3>NFL Pick&apos;em</h3>
+                <p>Family football pick&apos;em league app. Because not everything needs to make money.</p>
+              </div>
+            </div>
+          </div>
+          <p className="lab-note reveal">Mockups shown are concepts to illustrate what is possible, not live products.</p>
+        </div>
+      </section>
+
       {/* ============ CLIENT WORK ============ */}
       <section className="section bg-light" id="client-work">
         <div className="container">

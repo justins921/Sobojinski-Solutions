@@ -1462,3 +1462,11 @@ p {
   .calc-features { grid-template-columns: 1fr; }
   .calc-options-row { grid-template-columns: 1fr; }
 }
+
+.lab-note {
+  text-align: center;
+  color: #64748B;
+  font-size: 0.875rem;
+  margin-top: 2rem;
+  font-style: italic;
+}
