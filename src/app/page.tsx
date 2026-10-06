@@ -293,11 +293,11 @@ export default function HomePage() {
               </div>
             </div>
             <div className="shot-card reveal">
-              <BrowserFrame src="/screenshots/lab-weather.png" alt="Golf Weather concept app" />
+              <BrowserFrame src="/screenshots/lab-weather.png" alt="Golf Weather app" />
               <div className="shot-card-body">
-                <span className="shot-tag">Concept</span>
+                <span className="shot-tag">Live Demo</span>
                 <h3>Golf Weather</h3>
-                <p>Hyperlocal weather for golfers: wind, conditions, and go or no-go recommendations.</p>
+                <p>Hyperlocal weather for golfers: playability scores, best tee times, and course comparisons. <a href="https://weather-one-sandy-20.vercel.app/" target="_blank" rel="noopener">Try it live</a>.</p>
               </div>
             </div>
             <div className="shot-card reveal">
