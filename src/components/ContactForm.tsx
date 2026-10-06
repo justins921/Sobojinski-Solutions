@@ -1,9 +1,26 @@
 'use client'
 
-import { useState, FormEvent } from 'react'
+import { useState, useEffect, FormEvent, Suspense } from 'react'
+import { useSearchParams } from 'next/navigation'
 
-export default function ContactForm() {
+const INTEREST_MAP: Record<string, string> = {
+  'custom-software': 'general',
+  'web-design': 'web-design',
+  'seo': 'seo',
+  'one-off-tools': 'custom-tool',
+}
+
+function ContactFormInner() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const [service, setService] = useState('')
+  const searchParams = useSearchParams()
+
+  useEffect(() => {
+    const interest = searchParams.get('interest')
+    if (interest && INTEREST_MAP[interest]) {
+      setService(INTEREST_MAP[interest])
+    }
+  }, [searchParams])
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -63,7 +80,7 @@ export default function ContactForm() {
       </div>
       <div className="form-group">
         <label htmlFor="service" className="form-label">What are you interested in?</label>
-        <select id="service" name="service" className="form-select">
+        <select id="service" name="service" className="form-select" value={service} onChange={(e) => setService(e.target.value)}>
           <option value="">Select...</option>
           <option value="emr-os">EMR OS, Healthcare Platform</option>
           <option value="ugly-site-scraper">Ugly Site Scraper</option>
@@ -106,5 +123,13 @@ export default function ContactForm() {
         {status === 'error' && 'Error, please try again'}
       </button>
     </form>
+  )
+}
+
+export default function ContactForm() {
+  return (
+    <Suspense fallback={<div className="form-loading">Loading form...</div>}>
+      <ContactFormInner />
+    </Suspense>
   )
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import BrowserFrame from '@/components/BrowserFrame'
 
 export const metadata: Metadata = {
   title: 'Products & Services',
@@ -51,19 +52,11 @@ export default function ProductsPage() {
               <a href="https://emros.sobojinskisolutions.com" className="btn btn-primary" style={{ marginTop: '1.5rem', background: '#10B981', borderColor: '#10B981' }}>Visit EMR OS</a>
             </div>
             <div className="content-block-visual">
-              <div className="visual-card" style={{ borderTop: '4px solid #10B981' }}>
-                <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-                  <rect x="30" y="20" width="140" height="160" rx="12" fill="#F0FDF4" stroke="#10B981" strokeWidth="2" />
-                  <rect x="50" y="40" width="100" height="8" rx="4" fill="#10B981" opacity="0.3" />
-                  <rect x="50" y="58" width="70" height="6" rx="3" fill="#CBD5E1" />
-                  <rect x="50" y="74" width="100" height="6" rx="3" fill="#CBD5E1" />
-                  <rect x="50" y="90" width="85" height="6" rx="3" fill="#CBD5E1" />
-                  <path d="M50 115h100" stroke="#E2E8F0" strokeWidth="1" />
-                  <rect x="50" y="130" width="40" height="28" rx="6" fill="#10B981" opacity="0.15" />
-                  <rect x="100" y="130" width="40" height="28" rx="6" fill="#10B981" opacity="0.1" />
-                  <path d="M60 140v8m4-12v12m4-8v8" stroke="#10B981" strokeWidth="2" strokeLinecap="round" />
-                </svg>
-              </div>
+              <BrowserFrame
+                src="/screenshots/emr.png"
+                alt="EMR OS screenshot"
+                url="emros.sobojinskisolutions.com"
+              />
             </div>
           </div>
         </div>
@@ -86,16 +79,11 @@ export default function ProductsPage() {
               <a href="https://uglysitescraper.com" className="btn btn-primary" style={{ marginTop: '1.5rem', background: '#F97316', borderColor: '#F97316' }} target="_blank" rel="noopener noreferrer">Visit Ugly Site Scraper</a>
             </div>
             <div className="content-block-visual">
-              <div className="visual-card" style={{ borderTop: '4px solid #F97316' }}>
-                <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-                  <rect x="25" y="30" width="150" height="140" rx="12" fill="#FFF7ED" stroke="#F97316" strokeWidth="2" />
-                  <circle cx="75" cy="80" r="22" fill="none" stroke="#F97316" strokeWidth="2" />
-                  <line x1="91" y1="96" x2="110" y2="115" stroke="#F97316" strokeWidth="3" strokeLinecap="round" />
-                  <rect x="45" y="135" width="60" height="8" rx="4" fill="#F97316" opacity="0.2" />
-                  <rect x="115" y="135" width="40" height="8" rx="4" fill="#F97316" opacity="0.1" />
-                  <rect x="45" y="150" width="80" height="6" rx="3" fill="#CBD5E1" />
-                </svg>
-              </div>
+              <BrowserFrame
+                src="/screenshots/uss.png"
+                alt="Ugly Site Scraper screenshot"
+                url="uglysitescraper.com"
+              />
             </div>
           </div>
         </div>
@@ -118,17 +106,11 @@ export default function ProductsPage() {
               <a href="https://dothatagain.app" className="btn btn-primary" style={{ marginTop: '1.5rem' }} target="_blank" rel="noopener noreferrer">Visit DoThatAgain</a>
             </div>
             <div className="content-block-visual">
-              <div className="visual-card" style={{ borderTop: '4px solid #2563EB' }}>
-                <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-                  <rect x="60" y="20" width="80" height="160" rx="16" fill="#EFF6FF" stroke="#2563EB" strokeWidth="2" />
-                  <rect x="78" y="45" width="44" height="8" rx="4" fill="#2563EB" opacity="0.2" />
-                  <rect x="75" y="70" width="50" height="50" rx="25" fill="#2563EB" opacity="0.12" />
-                  <rect x="88" y="82" width="24" height="36" rx="12" fill="none" stroke="#2563EB" strokeWidth="2" />
-                  <path d="M82 118a18 18 0 0 0 36 0" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" fill="none" />
-                  <line x1="100" y1="136" x2="100" y2="146" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" />
-                  <rect x="75" y="155" width="50" height="6" rx="3" fill="#CBD5E1" />
-                </svg>
-              </div>
+              <BrowserFrame
+                src="/screenshots/dta.png"
+                alt="DoThatAgain screenshot"
+                url="dothatagain.app"
+              />
             </div>
           </div>
         </div>

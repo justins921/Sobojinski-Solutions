@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     q: 'Do you build custom websites for small businesses?',
-    a: 'Yes. We design and build fast, modern websites for local businesses, contractors, nonprofits, and healthcare practices. Every site is hand-coded, mobile responsive, and optimized for local search. No templates, no page builders, no monthly platform fees you do not need.',
+    a: 'Yes. We design and build fast, modern websites for local businesses, contractors, nonprofits, and healthcare practices. We use AI-assisted development to build and iterate quickly, so every site is mobile responsive, optimized for local search, and you get more for your budget. No templates, no page builders, no monthly platform fees you do not need.',
   },
   {
     q: 'What does a website cost?',
@@ -46,7 +46,7 @@ export default function FaqAccordion() {
         <div key={i} className={`faq-item reveal${openIndex === i ? ' open' : ''}`}>
           <button
             className="faq-question"
-            onClick={() => setOpenIndex(openIndex === i ? null : i)}
+            onClick={() => setOpenIndex(i)}
             aria-expanded={openIndex === i}
           >
             {faq.q}

@@ -4,7 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://sobojinskisolutions.com'
   const now = new Date()
 
-  const routes = ['', '/products', '/portfolio', '/about', '/contact'].map((path) => ({
+  const routes = ['', '/products', '/portfolio', '/calculator', '/about', '/contact'].map((path) => ({
     url: `${base}${path}`,
     lastModified: now,
     changeFrequency: 'weekly' as const,

@@ -3,21 +3,11 @@ import Link from 'next/link'
 import BrowserFrame from '@/components/BrowserFrame'
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
-  description: 'See the websites, platforms, and products built by Sobojinski Solutions. Real projects for real businesses across healthcare, local services, and nonprofits.',
+  title: 'Website Portfolio',
+  description: 'Client websites designed and built by Sobojinski Solutions. Real sites for healthcare, local services, and nonprofits.',
 }
 
 const projects = [
-  {
-    name: 'EMR OS',
-    type: 'Software Platform',
-    description: 'Electronic medical records built for independent physical therapy practices. Scheduling, documentation, billing, and patient engagement in one system, with AI billing tools for underpayment detection, denial-risk scoring, documentation-to-code review, and appeal drafts. $175 per provider per month, everything included.',
-    screenshot: '/screenshots/emr.png',
-    shotUrl: 'emros.sobojinskisolutions.com',
-    color: '#059669',
-    url: 'https://emros.sobojinskisolutions.com',
-    results: 'Flagship product, in active development with a pilot clinic.',
-  },
   {
     name: 'Fox Valley Physical Therapy',
     type: 'Client Website',
@@ -58,26 +48,6 @@ const projects = [
     url: '',
     results: 'Ongoing client.',
   },
-  {
-    name: 'Cedar Sense',
-    type: 'E-Commerce Website',
-    description: 'Custom e-commerce website for a natural products brand. Built with a focus on clean UX, fast load times, and seamless checkout. Includes product filtering, inventory management integration, and mobile-first responsive design.',
-    screenshot: null,
-    shotUrl: '',
-    color: '#059669',
-    url: 'https://cedarsense.com',
-    results: 'Increased online sales by 40% within the first 3 months of launch.',
-  },
-  {
-    name: 'HempWorks Wisconsin',
-    type: 'Business Website + SEO',
-    description: 'Full website redesign and SEO campaign for a Wisconsin-based hemp products company. Rebuilt the site for speed and conversions, then executed a comprehensive SEO strategy targeting local and national keywords.',
-    screenshot: null,
-    shotUrl: '',
-    color: '#16A34A',
-    url: 'https://hempworkswi.com',
-    results: 'Page 1 Google rankings achieved within 90 days for primary keywords.',
-  },
 ]
 
 export default function PortfolioPage() {
@@ -86,8 +56,8 @@ export default function PortfolioPage() {
       <section className="page-header">
         <div className="container">
           <div className="section-label">Our Work</div>
-          <h1>Portfolio</h1>
-          <p>Real projects built for real businesses. From software platforms to client websites and SEO campaigns, here&rsquo;s a look at what we&rsquo;ve delivered.</p>
+          <h1>Website Portfolio</h1>
+          <p>Client websites we have designed and built. Real sites for healthcare practices, local services, and nonprofits.</p>
         </div>
       </section>
 

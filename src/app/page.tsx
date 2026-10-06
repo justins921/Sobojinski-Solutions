@@ -106,7 +106,7 @@ export default function HomePage() {
             <p className="hero-subtitle fade-in-up delay-2">
               EMR OS for physical therapy clinics. Websites for local businesses.
               Custom tools that solve specific problems. Real products, live today,
-              built by hand by Justin Sobojinski.
+              built by Justin Sobojinski using AI-assisted development to ship faster and iterate quickly.
             </p>
             <div className="hero-buttons fade-in-up delay-3">
               <Link href="#emr" className="btn btn-primary btn-lg">See EMR OS</Link>
@@ -264,8 +264,9 @@ export default function HomePage() {
               <div className="section-label">Meet the Builder</div>
               <h2>Hey, I&rsquo;m Justin</h2>
               <p>
-                I&rsquo;m the founder of Sobojinski Solutions, and I build everything here myself.
-                Every product, every client website, every custom tool. When you work with me,
+                I&rsquo;m the founder of Sobojinski Solutions, and I build everything here myself,
+                using AI-assisted development to ship faster and iterate quickly. Every product,
+                every client website, every custom tool. When you work with me,
                 you talk directly to the person writing the code.
               </p>
               <ul className="benefit-list">
