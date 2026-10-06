@@ -3,12 +3,20 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Products & Services',
-  description: 'Explore our purpose-built software platforms and professional services: EMR OS, Golf OS, Work OS, SEO OS, plus custom web design and SEO services.',
+  description: 'Real software products from Sobojinski Solutions: EMR OS for physical therapy clinics, Ugly Site Scraper for lead generation, DoThatAgain for personal memory, plus custom web design and SEO services.',
 }
 
 const CheckIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
 )
+
+function FeatureItem({ children }: { children: React.ReactNode }) {
+  return (
+    <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}>
+      <CheckIcon /> {children}
+    </li>
+  )
+}
 
 export default function ProductsPage() {
   return (
@@ -16,8 +24,8 @@ export default function ProductsPage() {
       <section className="page-header">
         <div className="container">
           <div className="section-label">Products &amp; Services</div>
-          <h1>Platforms &amp; Professional Services</h1>
-          <p>Purpose-built software platforms for specific industries, plus expert web design and SEO services to grow your digital presence.</p>
+          <h1>Products &amp; Professional Services</h1>
+          <p>Real software we built and ship, plus expert web design and SEO services to grow your business.</p>
         </div>
       </section>
 
@@ -26,16 +34,19 @@ export default function ProductsPage() {
         <div className="container">
           <div className="content-block reveal">
             <div className="content-block-text">
-              <div className="section-label" style={{ color: '#10B981' }}>Healthcare</div>
+              <div className="section-label" style={{ color: '#10B981' }}>Healthcare · Flagship</div>
               <h2>EMR OS</h2>
-              <p>A modern electronic medical records platform designed for independent practices and small clinics. EMR OS streamlines patient care, simplifies records management, and keeps you compliant — without the complexity of enterprise systems.</p>
-              <p>Built from the ground up for providers who want a fast, intuitive system that stays out of the way and lets them focus on patients.</p>
+              <p>Electronic medical records built for independent physical therapy practices. Scheduling, documentation, billing, and patient engagement in one fast, intuitive system that stays out of the way and lets providers focus on patients.</p>
+              <p>Includes AI billing tools that work with your own API key: underpayment detection against your fee schedules, denial-risk scoring on claims, documentation-to-code review that checks billed codes against clinical notes, and AI-drafted appeal letters for denied claims.</p>
+              <p style={{ fontWeight: 600, color: '#0F172A' }}>$175 per provider per month. Everything included. No tiers, no upsells.</p>
               <ul className="feature-list" style={{ listStyle: 'none', marginTop: '1.5rem' }}>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Patient records & chart management</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Appointment scheduling & reminders</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> E-prescribing & medication tracking</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> HIPAA-compliant data handling</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Billing & insurance integration</li>
+                <FeatureItem>Patient records &amp; chart management</FeatureItem>
+                <FeatureItem>Appointment scheduling &amp; reminders</FeatureItem>
+                <FeatureItem>Home exercise programs with video</FeatureItem>
+                <FeatureItem>Underpayment detection &amp; fee schedules</FeatureItem>
+                <FeatureItem>Denial-pattern analysis &amp; risk scoring</FeatureItem>
+                <FeatureItem>Documentation-to-code AI review</FeatureItem>
+                <FeatureItem>AI-drafted appeal letters</FeatureItem>
               </ul>
               <a href="https://emros.sobojinskisolutions.com" className="btn btn-primary" style={{ marginTop: '1.5rem', background: '#10B981', borderColor: '#10B981' }}>Visit EMR OS</a>
             </div>
@@ -58,105 +69,97 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Golf OS */}
+      {/* Ugly Site Scraper */}
       <section className="section bg-light">
         <div className="container">
           <div className="content-block reversed reveal">
             <div className="content-block-text">
-              <div className="section-label" style={{ color: '#22C55E' }}>Golf Improvement</div>
-              <h2>Golf OS</h2>
-              <p>Complete golf course and club management in one platform. Golf OS handles tee time bookings, member management, POS integration, and course operations — giving your staff and members a seamless experience.</p>
-              <p>Designed for courses, clubs, and resorts that want modern tools without the cost and complexity of legacy golf management software.</p>
+              <div className="section-label" style={{ color: '#F97316' }}>Lead Generation</div>
+              <h2>Ugly Site Scraper</h2>
+              <p>Find ugly, outdated websites and turn them into web design clients. Ugly Site Scraper scans the web for businesses with sites that clearly need help, so freelancers and agencies can build a steady pipeline of prospects.</p>
+              <p>If you sell websites, this is your unfair advantage. Stop guessing who needs a redesign and start with a list.</p>
               <ul className="feature-list" style={{ listStyle: 'none', marginTop: '1.5rem' }}>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Tee time booking & management</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Member profiles & communication</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> POS & pro shop integration</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Course condition tracking</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Tournament & event management</li>
+                <FeatureItem>Find outdated sites in any market</FeatureItem>
+                <FeatureItem>Prospect lists built for outreach</FeatureItem>
+                <FeatureItem>Built by someone who sells websites</FeatureItem>
               </ul>
-              <a href="https://golfos.sobojinskisolutions.com" className="btn btn-primary" style={{ marginTop: '1.5rem', background: '#22C55E', borderColor: '#22C55E' }}>Visit Golf OS</a>
-            </div>
-            <div className="content-block-visual">
-              <div className="visual-card" style={{ borderTop: '4px solid #22C55E' }}>
-                <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-                  <circle cx="100" cy="100" r="80" fill="#F0FDF4" stroke="#22C55E" strokeWidth="2" />
-                  <circle cx="100" cy="100" r="55" fill="none" stroke="#22C55E" strokeWidth="1" opacity="0.3" />
-                  <circle cx="100" cy="100" r="30" fill="none" stroke="#22C55E" strokeWidth="1" opacity="0.2" />
-                  <circle cx="100" cy="100" r="6" fill="#22C55E" />
-                  <line x1="100" y1="40" x2="100" y2="20" stroke="#334155" strokeWidth="2" strokeLinecap="round" />
-                  <rect x="96" y="10" width="8" height="12" rx="2" fill="#22C55E" opacity="0.6" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Work OS */}
-      <section className="section">
-        <div className="container">
-          <div className="content-block reveal">
-            <div className="content-block-text">
-              <div className="section-label" style={{ color: '#8B5CF6' }}>Productivity</div>
-              <h2>Work OS</h2>
-              <p>Workforce coordination and project management built for teams that need to move fast. Work OS combines task tracking, scheduling, team communication, and reporting into a single streamlined interface.</p>
-              <p>No bloat, no feature overload — just the tools your team actually needs to get work done and stay aligned.</p>
-              <ul className="feature-list" style={{ listStyle: 'none', marginTop: '1.5rem' }}>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Task & project management</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Team scheduling & availability</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Time tracking & reporting</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> File sharing & collaboration</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Customizable workflows</li>
-              </ul>
-              <a href="https://workos.sobojinskisolutions.com" className="btn btn-primary" style={{ marginTop: '1.5rem', background: '#8B5CF6', borderColor: '#8B5CF6' }}>Visit Work OS</a>
-            </div>
-            <div className="content-block-visual">
-              <div className="visual-card" style={{ borderTop: '4px solid #8B5CF6' }}>
-                <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-                  <rect x="20" y="40" width="160" height="120" rx="12" fill="#F5F3FF" stroke="#8B5CF6" strokeWidth="2" />
-                  <rect x="35" y="55" width="50" height="40" rx="6" fill="#8B5CF6" opacity="0.15" />
-                  <rect x="95" y="55" width="70" height="18" rx="4" fill="#8B5CF6" opacity="0.1" />
-                  <rect x="95" y="80" width="50" height="6" rx="3" fill="#CBD5E1" />
-                  <rect x="35" y="110" width="130" height="6" rx="3" fill="#CBD5E1" />
-                  <rect x="35" y="125" width="90" height="6" rx="3" fill="#CBD5E1" />
-                  <rect x="35" y="140" width="60" height="6" rx="3" fill="#CBD5E1" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SEO OS */}
-      <section className="section bg-light">
-        <div className="container">
-          <div className="content-block reversed reveal">
-            <div className="content-block-text">
-              <div className="section-label" style={{ color: '#F97316' }}>Marketing</div>
-              <h2>SEO OS</h2>
-              <p>SEO management and optimization platform built for agencies, marketers, and business owners who want actionable insights instead of data overload. Track rankings, audit sites, analyze competitors, and execute strategies from one dashboard.</p>
-              <p>Powered by the same SEO expertise behind our proven 90-day ranking guarantee.</p>
-              <ul className="feature-list" style={{ listStyle: 'none', marginTop: '1.5rem' }}>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Keyword tracking & research</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Site audits & technical SEO</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Competitor analysis & benchmarking</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Backlink monitoring</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Automated reporting & alerts</li>
-              </ul>
-              <a href="https://seoos.sobojinskisolutions.com" className="btn btn-primary" style={{ marginTop: '1.5rem', background: '#F97316', borderColor: '#F97316' }}>Visit SEO OS</a>
+              <a href="https://uglysitescraper.com" className="btn btn-primary" style={{ marginTop: '1.5rem', background: '#F97316', borderColor: '#F97316' }} target="_blank" rel="noopener noreferrer">Visit Ugly Site Scraper</a>
             </div>
             <div className="content-block-visual">
               <div className="visual-card" style={{ borderTop: '4px solid #F97316' }}>
                 <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
                   <rect x="25" y="30" width="150" height="140" rx="12" fill="#FFF7ED" stroke="#F97316" strokeWidth="2" />
-                  <path d="M50 140 L75 110 L100 125 L125 80 L150 90" stroke="#F97316" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                  <circle cx="50" cy="140" r="3" fill="#F97316" />
-                  <circle cx="75" cy="110" r="3" fill="#F97316" />
-                  <circle cx="100" cy="125" r="3" fill="#F97316" />
-                  <circle cx="125" cy="80" r="3" fill="#F97316" />
-                  <circle cx="150" cy="90" r="3" fill="#F97316" />
-                  <rect x="45" y="45" width="40" height="8" rx="4" fill="#F97316" opacity="0.2" />
-                  <rect x="95" y="45" width="55" height="8" rx="4" fill="#F97316" opacity="0.1" />
+                  <circle cx="75" cy="80" r="22" fill="none" stroke="#F97316" strokeWidth="2" />
+                  <line x1="91" y1="96" x2="110" y2="115" stroke="#F97316" strokeWidth="3" strokeLinecap="round" />
+                  <rect x="45" y="135" width="60" height="8" rx="4" fill="#F97316" opacity="0.2" />
+                  <rect x="115" y="135" width="40" height="8" rx="4" fill="#F97316" opacity="0.1" />
+                  <rect x="45" y="150" width="80" height="6" rx="3" fill="#CBD5E1" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DoThatAgain */}
+      <section className="section">
+        <div className="container">
+          <div className="content-block reveal">
+            <div className="content-block-text">
+              <div className="section-label" style={{ color: '#2563EB' }}>iOS App</div>
+              <h2>DoThatAgain</h2>
+              <p>A voice-first personal memory app. Record what worked and what did not, rate your experiences, and ask your own history later. Your decisions, lessons, and ideas, searchable whenever you need them.</p>
+              <p>Built for people who learn by doing and want to stop repeating mistakes.</p>
+              <ul className="feature-list" style={{ listStyle: 'none', marginTop: '1.5rem' }}>
+                <FeatureItem>Voice-first quick capture</FeatureItem>
+                <FeatureItem>Worked / did not work ratings</FeatureItem>
+                <FeatureItem>Full-text search across your history</FeatureItem>
+              </ul>
+              <a href="https://dothatagain.app" className="btn btn-primary" style={{ marginTop: '1.5rem' }} target="_blank" rel="noopener noreferrer">Visit DoThatAgain</a>
+            </div>
+            <div className="content-block-visual">
+              <div className="visual-card" style={{ borderTop: '4px solid #2563EB' }}>
+                <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+                  <rect x="60" y="20" width="80" height="160" rx="16" fill="#EFF6FF" stroke="#2563EB" strokeWidth="2" />
+                  <rect x="78" y="45" width="44" height="8" rx="4" fill="#2563EB" opacity="0.2" />
+                  <rect x="75" y="70" width="50" height="50" rx="25" fill="#2563EB" opacity="0.12" />
+                  <rect x="88" y="82" width="24" height="36" rx="12" fill="none" stroke="#2563EB" strokeWidth="2" />
+                  <path d="M82 118a18 18 0 0 0 36 0" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" fill="none" />
+                  <line x1="100" y1="136" x2="100" y2="146" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" />
+                  <rect x="75" y="155" width="50" height="6" rx="3" fill="#CBD5E1" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Penelope */}
+      <section className="section bg-light">
+        <div className="container">
+          <div className="content-block reversed reveal">
+            <div className="content-block-text">
+              <div className="section-label" style={{ color: '#8B5CF6' }}>In Development</div>
+              <h2>Penelope</h2>
+              <p>An AI sales agent for agencies. Cold email infrastructure, prospecting, and follow-up automation designed to book meetings while you do the work.</p>
+              <p>Currently in development. Join the waitlist to hear when it launches.</p>
+              <ul className="feature-list" style={{ listStyle: 'none', marginTop: '1.5rem' }}>
+                <FeatureItem>Cold email infrastructure</FeatureItem>
+                <FeatureItem>Prospecting &amp; list building</FeatureItem>
+                <FeatureItem>Automated follow-up sequences</FeatureItem>
+              </ul>
+              <Link href="/contact" className="btn btn-primary" style={{ marginTop: '1.5rem', background: '#8B5CF6', borderColor: '#8B5CF6' }}>Join the Waitlist</Link>
+            </div>
+            <div className="content-block-visual">
+              <div className="visual-card" style={{ borderTop: '4px solid #8B5CF6' }}>
+                <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+                  <rect x="25" y="50" width="150" height="100" rx="12" fill="#F5F3FF" stroke="#8B5CF6" strokeWidth="2" />
+                  <rect x="45" y="70" width="40" height="8" rx="4" fill="#8B5CF6" opacity="0.2" />
+                  <rect x="45" y="88" width="110" height="6" rx="3" fill="#CBD5E1" />
+                  <rect x="45" y="102" width="90" height="6" rx="3" fill="#CBD5E1" />
+                  <rect x="45" y="116" width="70" height="6" rx="3" fill="#CBD5E1" />
+                  <circle cx="150" cy="70" r="14" fill="#8B5CF6" opacity="0.12" />
+                  <path d="M144 70l4 4 8-8" stroke="#8B5CF6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                 </svg>
               </div>
             </div>
@@ -171,14 +174,14 @@ export default function ProductsPage() {
             <div className="content-block-text">
               <div className="section-label" style={{ color: '#2563EB' }}>Design &amp; Development</div>
               <h2>Custom Web Design</h2>
-              <p>We got our start building websites — and we still do it better than anyone. Whether you need a polished landing page, a full business website, or a custom e-commerce store, we craft every detail to match your brand and convert visitors into customers.</p>
-              <p>Fully responsive, SEO-friendly, and built with modern technology. No templates, no page builders — just clean, custom code designed for performance.</p>
+              <p>We got our start building websites, and we still do it better than anyone. Whether you need a polished landing page, a full business website, or a custom e-commerce store, we craft every detail to match your brand and convert visitors into customers.</p>
+              <p>Fully responsive, SEO-friendly, and built with modern technology. No templates, no page builders, just clean, custom code designed for performance.</p>
               <ul className="feature-list" style={{ listStyle: 'none', marginTop: '1.5rem' }}>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Custom responsive design</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> E-commerce &amp; online stores</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Landing pages &amp; lead generation</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Content management systems</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Performance optimization</li>
+                <FeatureItem>Custom responsive design</FeatureItem>
+                <FeatureItem>E-commerce &amp; online stores</FeatureItem>
+                <FeatureItem>Landing pages &amp; lead generation</FeatureItem>
+                <FeatureItem>Content management systems</FeatureItem>
+                <FeatureItem>Performance optimization</FeatureItem>
               </ul>
               <Link href="/contact" className="btn btn-primary" style={{ marginTop: '1.5rem' }}>Get a Quote</Link>
             </div>
@@ -213,13 +216,12 @@ export default function ProductsPage() {
               <div className="section-label" style={{ color: '#F97316' }}>Search Optimization</div>
               <h2>SEO Services</h2>
               <p>Our data-driven SEO strategies get your business found by the right people at the right time. We combine technical expertise, content strategy, and proven tactics to boost your rankings and drive organic traffic that converts.</p>
-              <p>Backed by our 90-day ranking guarantee — we deliver measurable results, not empty promises.</p>
               <ul className="feature-list" style={{ listStyle: 'none', marginTop: '1.5rem' }}>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Keyword research &amp; strategy</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> On-page &amp; technical SEO</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Link building &amp; outreach</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Content strategy &amp; optimization</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 0', fontSize: '0.9rem', color: '#475569' }}><CheckIcon /> Monthly reporting &amp; analytics</li>
+                <FeatureItem>Keyword research &amp; strategy</FeatureItem>
+                <FeatureItem>On-page &amp; technical SEO</FeatureItem>
+                <FeatureItem>Link building &amp; outreach</FeatureItem>
+                <FeatureItem>Content strategy &amp; optimization</FeatureItem>
+                <FeatureItem>Monthly reporting &amp; analytics</FeatureItem>
               </ul>
               <Link href="/contact" className="btn btn-primary" style={{ marginTop: '1.5rem', background: '#F97316', borderColor: '#F97316' }}>Get Started</Link>
             </div>
@@ -243,10 +245,10 @@ export default function ProductsPage() {
       {/* CTA */}
       <section className="section cta-section">
         <div className="container">
-          <h2 className="reveal">Not Sure Which Platform<br />Is Right for You?</h2>
-          <p className="reveal">Schedule a call with our team and we&rsquo;ll help you find the right solution for your business.</p>
+          <h2 className="reveal">Not Sure Which Product<br />Is Right for You?</h2>
+          <p className="reveal">Reach out and we&rsquo;ll help you find the right fit for your business.</p>
           <div className="cta-buttons reveal">
-            <Link href="/contact" className="btn btn-primary btn-lg">Schedule a Call</Link>
+            <Link href="/contact" className="btn btn-primary btn-lg">Get in Touch</Link>
             <Link href="/about" className="btn btn-outline btn-lg" style={{ borderColor: 'rgba(255,255,255,0.2)', color: '#fff' }}>Learn About Us</Link>
           </div>
         </div>

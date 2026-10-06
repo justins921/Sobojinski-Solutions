@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="brand-bar">
-        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span>
       </div>
       <div className="container">
         <div className="footer-grid">
@@ -22,15 +22,15 @@ export default function Footer() {
                 <span>Solutions</span>
               </div>
             </Link>
-            <p>Purpose-built software platforms and professional web design &amp; SEO services. Solving real business problems across healthcare, golf improvement, workforce management, and digital marketing.</p>
+            <p>Real software products, client websites, custom web tools, and SEO services for small businesses. Built and shipped by Sobojinski Solutions.</p>
           </div>
           <div>
             <h4>Products</h4>
             <ul className="footer-links">
               <li><a href="https://emros.sobojinskisolutions.com">EMR OS</a></li>
-              <li><a href="https://golfos.sobojinskisolutions.com">Golf OS</a></li>
-              <li><a href="https://workos.sobojinskisolutions.com">Work OS</a></li>
-              <li><a href="https://seoos.sobojinskisolutions.com">SEO OS</a></li>
+              <li><a href="https://uglysitescraper.com" target="_blank" rel="noopener noreferrer">Ugly Site Scraper</a></li>
+              <li><a href="https://dothatagain.app" target="_blank" rel="noopener noreferrer">DoThatAgain</a></li>
+              <li><Link href="/products">Penelope (soon)</Link></li>
             </ul>
           </div>
           <div>
@@ -38,6 +38,7 @@ export default function Footer() {
             <ul className="footer-links">
               <li><Link href="/products#web-design">Web Design</Link></li>
               <li><Link href="/products#seo-services">SEO Services</Link></li>
+              <li><Link href="/#custom-tools">Custom Tools</Link></li>
             </ul>
           </div>
           <div>

@@ -62,14 +62,16 @@ export default function ContactForm() {
         <input type="tel" id="phone" name="phone" className="form-input" placeholder="+1 (555) 000-0000" />
       </div>
       <div className="form-group">
-        <label htmlFor="service" className="form-label">What product are you interested in?</label>
+        <label htmlFor="service" className="form-label">What are you interested in?</label>
         <select id="service" name="service" className="form-select">
-          <option value="">Select a product...</option>
-          <option value="emr-os">EMR OS — Healthcare Platform</option>
-          <option value="golf-os">Golf OS — Golf Management</option>
-          <option value="work-os">Work OS — Workforce Management</option>
-          <option value="seo-os">SEO OS — SEO Platform</option>
+          <option value="">Select...</option>
+          <option value="emr-os">EMR OS, Healthcare Platform</option>
+          <option value="ugly-site-scraper">Ugly Site Scraper</option>
+          <option value="dothatagain">DoThatAgain</option>
+          <option value="penelope">Penelope (waitlist)</option>
           <option value="web-design">Web Design Services</option>
+          <option value="seo">SEO Services</option>
+          <option value="custom-tool">Custom Web Tool</option>
           <option value="general">General Inquiry</option>
         </select>
       </div>
@@ -101,7 +103,7 @@ export default function ContactForm() {
             Message Sent!
           </>
         )}
-        {status === 'error' && 'Error — Please try again'}
+        {status === 'error' && 'Error, please try again'}
       </button>
     </form>
   )

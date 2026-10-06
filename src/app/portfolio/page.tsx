@@ -3,10 +3,55 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Portfolio',
-  description: 'See the websites, platforms, and products built by Sobojinski Solutions. Real projects, real results for businesses across multiple industries.',
+  description: 'See the websites, platforms, and products built by Sobojinski Solutions. Real projects for real businesses across healthcare, local services, and nonprofits.',
 }
 
 const projects = [
+  {
+    name: 'EMR OS',
+    type: 'Software Platform',
+    description: 'Electronic medical records built for independent physical therapy practices. Scheduling, documentation, billing, and patient engagement in one system, with AI billing tools for underpayment detection, denial-risk scoring, documentation-to-code review, and appeal drafts. $175 per provider per month, everything included.',
+    tags: ['Platform', 'Healthcare'],
+    color: '#10B981',
+    url: 'https://emros.sobojinskisolutions.com',
+    results: 'Flagship product, in active development with a pilot clinic.',
+  },
+  {
+    name: 'Fox Valley Physical Therapy',
+    type: 'Client Website',
+    description: 'Full website for a physical therapy clinic in Oshkosh, Wisconsin. Service pages, provider info, and online scheduling built for speed and local search.',
+    tags: ['Client Site', 'Web Design'],
+    color: '#2563EB',
+    url: 'https://foxvalleyphysicaltherapy.com',
+    results: 'Live client site.',
+  },
+  {
+    name: 'Karni Pier',
+    type: 'Client Website',
+    description: 'Website for a pier installation company. Migrated off an expensive page builder to a fast, modern site that the owner can afford to keep.',
+    tags: ['Client Site', 'Web Design'],
+    color: '#0EA5E9',
+    url: 'https://karnipier.com',
+    results: 'Live client site.',
+  },
+  {
+    name: 'Bikers Down',
+    type: 'Client Website',
+    description: 'Website for a Wisconsin nonprofit supporting injured motorcyclists. Clear mission pages, event info, and donation paths.',
+    tags: ['Client Site', 'Web Design'],
+    color: '#8B5CF6',
+    url: 'https://bikersdownwi.org',
+    results: 'Live client site.',
+  },
+  {
+    name: 'Don Wells Lawn & Snow',
+    type: 'Client Website',
+    description: 'Website for a lawn care and snow removal business. Service listings, quote requests, and local SEO that brings in seasonal work.',
+    tags: ['Client Site', 'Web Design'],
+    color: '#65A30D',
+    url: '',
+    results: 'Ongoing client.',
+  },
   {
     name: 'Cedar Sense',
     type: 'E-Commerce Website',
@@ -25,45 +70,9 @@ const projects = [
     url: 'https://hempworkswi.com',
     results: 'Page 1 Google rankings achieved within 90 days for primary keywords.',
   },
-  {
-    name: 'EMR OS',
-    type: 'Software Platform',
-    description: 'Purpose-built electronic medical records platform for independent practices and small clinics. Features patient records management, appointment scheduling, e-prescribing, HIPAA-compliant data handling, and billing integration.',
-    tags: ['Platform', 'Healthcare', 'SaaS'],
-    color: '#2563EB',
-    url: 'https://emros.sobojinskisolutions.com',
-    results: 'Streamlining healthcare operations for independent providers.',
-  },
-  {
-    name: 'Golf OS',
-    type: 'Software Platform',
-    description: 'Complete golf course and club management platform. Handles tee time bookings, member management, POS integration, course condition tracking, and tournament management in a single unified interface.',
-    tags: ['Platform', 'Golf Improvement', 'SaaS'],
-    color: '#22C55E',
-    url: 'https://golfos.sobojinskisolutions.com',
-    results: 'Modern management tools for courses and clubs.',
-  },
-  {
-    name: 'Work OS',
-    type: 'Software Platform',
-    description: 'Workforce coordination and project management platform. Combines task tracking, team scheduling, time tracking, file sharing, and customizable workflows into a streamlined interface built for teams that move fast.',
-    tags: ['Platform', 'Productivity', 'SaaS'],
-    color: '#8B5CF6',
-    url: 'https://workos.sobojinskisolutions.com',
-    results: 'Helping teams stay aligned and ship faster.',
-  },
-  {
-    name: 'SEO OS',
-    type: 'Software Platform',
-    description: 'SEO management and optimization platform for agencies, marketers, and business owners. Keyword tracking, site audits, competitor analysis, backlink monitoring, and automated reporting — all from one dashboard.',
-    tags: ['Platform', 'Marketing', 'SaaS'],
-    color: '#F97316',
-    url: 'https://seoos.sobojinskisolutions.com',
-    results: 'Data-driven SEO insights for smarter decisions.',
-  },
 ]
 
-const filters = ['All', 'Web Design', 'SEO', 'Platform']
+const filters = ['All', 'Web Design', 'SEO', 'Platform', 'Client Site']
 
 export default function PortfolioPage() {
   return (
@@ -72,7 +81,7 @@ export default function PortfolioPage() {
         <div className="container">
           <div className="section-label">Our Work</div>
           <h1>Portfolio</h1>
-          <p>Real projects built for real businesses. From custom websites and SEO campaigns to full software platforms, here&rsquo;s a look at what we&rsquo;ve delivered.</p>
+          <p>Real projects built for real businesses. From software platforms to client websites and SEO campaigns, here&rsquo;s a look at what we&rsquo;ve delivered.</p>
         </div>
       </section>
 
@@ -108,9 +117,11 @@ export default function PortfolioPage() {
                       <span>{project.results}</span>
                     </div>
                   )}
-                  <a href={project.url} className="btn btn-outline" style={{ marginTop: '1rem' }} target="_blank" rel="noopener noreferrer">
-                    View Project
-                  </a>
+                  {project.url && (
+                    <a href={project.url} className="btn btn-outline" style={{ marginTop: '1rem' }} target="_blank" rel="noopener noreferrer">
+                      View Project
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
@@ -122,7 +133,7 @@ export default function PortfolioPage() {
       <section className="section cta-section">
         <div className="container">
           <h2 className="reveal">Want to Be Our<br />Next Success Story?</h2>
-          <p className="reveal">Whether you need a custom website, SEO that delivers, or a full platform built for your industry — let&rsquo;s talk.</p>
+          <p className="reveal">Whether you need a custom website, SEO that delivers, or a tool built for your business, let&rsquo;s talk.</p>
           <div className="cta-buttons reveal">
             <Link href="/contact" className="btn btn-primary btn-lg">Start Your Project</Link>
             <Link href="/products" className="btn btn-outline btn-lg" style={{ borderColor: 'rgba(255,255,255,0.2)', color: '#fff' }}>View Products &amp; Services</Link>

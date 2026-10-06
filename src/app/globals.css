@@ -509,8 +509,7 @@ p {
 
 .brand-bar span:nth-child(1) { background: var(--ss-brand); }
 .brand-bar span:nth-child(2) { background: var(--product-emr); }
-.brand-bar span:nth-child(3) { background: var(--product-work); }
-.brand-bar span:nth-child(4) { background: var(--product-seo); }
+.brand-bar span:nth-child(3) { background: var(--ss-gray-400); }
 
 /* --- Section Headers --- */
 .section-header {

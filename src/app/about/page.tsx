@@ -22,7 +22,7 @@ export default function AboutPage() {
         <div className="container">
           <div className="mission-block reveal">
             <h2>Creating Solutions for Your Business Needs</h2>
-            <p>Sobojinski Solutions is a business solutions company that builds purpose-built software platforms and delivers expert web design &amp; SEO services. We engineer specialized operating systems for healthcare, golf improvement, workforce management, and digital marketing — while continuing to help businesses grow through custom websites and search engine optimization.</p>
+            <p>Sobojinski Solutions builds real software products and designs websites for small businesses. Our flagship product is EMR OS for physical therapy clinics, alongside tools like Ugly Site Scraper and DoThatAgain, plus custom web design, SEO, and one-off web tools built for specific business needs.</p>
           </div>
         </div>
       </section>
@@ -34,7 +34,7 @@ export default function AboutPage() {
             <div className="content-block-text">
               <div className="section-label">Our Evolution</div>
               <h2>Building Better, Step by Step</h2>
-              <p>What started as a passion for crafting websites evolved into something bigger — a mission to build software that solves real business problems across industries.</p>
+              <p>What started as a passion for crafting websites evolved into something bigger, a mission to build software that solves real business problems across industries.</p>
             </div>
             <div>
               <div className="timeline">
@@ -54,7 +54,7 @@ export default function AboutPage() {
                   <div className="timeline-dot"></div>
                   <div className="timeline-year">Today</div>
                   <h4>Business Solutions Company</h4>
-                  <p>We&rsquo;re building a suite of purpose-built platforms — EMR OS, Golf OS, Work OS, and SEO OS — while continuing to deliver the custom web design and SEO services where it all started.</p>
+                  <p>We&rsquo;re building real software products, EMR OS for physical therapy clinics, Ugly Site Scraper for lead generation, and DoThatAgain for personal memory, while continuing to deliver the custom web design and SEO services where it all started.</p>
                 </div>
                 <div className="timeline-item">
                   <div className="timeline-dot"></div>
@@ -140,7 +140,7 @@ export default function AboutPage() {
       <section className="section cta-section">
         <div className="container">
           <h2 className="reveal">Ready to Build Something<br />Together?</h2>
-          <p className="reveal">Whether you need a platform for your industry, a custom website, or SEO that delivers results — we&rsquo;re here to help.</p>
+          <p className="reveal">Whether you need a platform for your industry, a custom website, or SEO that delivers results, we&rsquo;re here to help.</p>
           <div className="cta-buttons reveal">
             <Link href="/contact" className="btn btn-primary btn-lg">Get in Touch</Link>
             <Link href="/products" className="btn btn-outline btn-lg" style={{ borderColor: 'rgba(255,255,255,0.2)', color: '#fff' }}>Explore Products</Link>

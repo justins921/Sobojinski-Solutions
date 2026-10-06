@@ -6,22 +6,26 @@ import ScrollEffects from '@/components/ScrollEffects'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Sobojinski Solutions | Business Solutions, Engineered',
+    default: 'Sobojinski Solutions | Custom Software, Websites & SEO',
     template: '%s | Sobojinski Solutions',
   },
-  description: 'Purpose-built software platforms, custom web design, and SEO services that solve real business problems. From healthcare to golf improvement, Sobojinski Solutions delivers the solutions your business needs.',
-  keywords: ['business solutions', 'software platforms', 'EMR', 'golf management', 'project management', 'SEO platform', 'SaaS', 'business software', 'web design', 'SEO services', 'custom websites'],
+  description: 'Sobojinski Solutions builds real software products like EMR OS for physical therapy clinics, designs websites for local businesses, and creates custom web tools. Plus web design and SEO services that deliver.',
+  keywords: ['custom software', 'EMR', 'physical therapy software', 'web design', 'SEO services', 'custom websites', 'web tools', 'small business software', 'lead generation software'],
+  metadataBase: new URL('https://sobojinskisolutions.com'),
+  alternates: {
+    canonical: 'https://sobojinskisolutions.com/',
+  },
   openGraph: {
-    title: 'Sobojinski Solutions | Business Solutions, Engineered',
-    description: 'Purpose-built software platforms, custom web design, and SEO services. Solving real business problems across healthcare, golf improvement, workforce management, and digital marketing.',
+    title: 'Sobojinski Solutions | Custom Software, Websites & SEO',
+    description: 'Real software products like EMR OS for physical therapy clinics, client websites, custom web tools, and SEO services for small businesses.',
     type: 'website',
     url: 'https://sobojinskisolutions.com/',
     siteName: 'Sobojinski Solutions',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sobojinski Solutions | Business Solutions, Engineered',
-    description: 'Purpose-built software platforms that solve real business problems.',
+    title: 'Sobojinski Solutions | Custom Software, Websites & SEO',
+    description: 'Real software products, client websites, custom web tools, and SEO services.',
   },
   robots: {
     index: true,

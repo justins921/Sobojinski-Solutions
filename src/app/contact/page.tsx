@@ -13,7 +13,7 @@ export default function ContactPage() {
         <div className="container">
           <div className="section-label fade-in-up">Contact Us</div>
           <h1 className="fade-in-up delay-1">Let&rsquo;s Start a Conversation</h1>
-          <p className="fade-in-up delay-2">Whether you have a question about our products, need a custom solution, or want to explore a partnership — we&rsquo;re here to help.</p>
+          <p className="fade-in-up delay-2">Whether you have a question about our products, need a custom solution, or want to explore a partnership, we&rsquo;re here to help.</p>
         </div>
       </section>
 
@@ -61,7 +61,7 @@ export default function ContactPage() {
                 <h3 style={{ marginBottom: '1.5rem' }}>Quick Answers</h3>
                 <div style={{ marginBottom: '1.5rem' }}>
                   <h4 style={{ fontSize: '0.95rem', marginBottom: '0.5rem' }}>What products do you offer?</h4>
-                  <p style={{ fontSize: '0.875rem', color: '#64748B' }}>We build four specialized platforms: EMR OS (healthcare), Golf OS (golf management), Work OS (workforce tools), and SEO OS (SEO platform).</p>
+                  <p style={{ fontSize: '0.875rem', color: '#64748B' }}>Our flagship product is EMR OS for physical therapy clinics, plus Ugly Site Scraper for lead generation and DoThatAgain for personal memory. We also build client websites, custom web tools, and offer web design and SEO services.</p>
                 </div>
                 <div style={{ marginBottom: '1.5rem' }}>
                   <h4 style={{ fontSize: '0.95rem', marginBottom: '0.5rem' }}>Do you still offer web design?</h4>

@@ -1,12 +1,10 @@
 <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Sobojinski Solutions Logo: 4-square grid representing the 4 OS products -->
-  <rect width="200" height="200" rx="40" fill="#0F172A" />
-  <!-- Top-left: Brand Blue (SS core) -->
-  <rect x="45" y="45" width="45" height="45" rx="8" fill="#2563EB" />
-  <!-- Top-right: Emerald (EMR OS) -->
-  <rect x="110" y="45" width="45" height="45" rx="8" fill="#10B981" />
-  <!-- Bottom-left: Violet (Work OS) -->
-  <rect x="45" y="110" width="45" height="45" rx="8" fill="#8B5CF6" />
-  <!-- Bottom-right: Orange (SEO OS) -->
-  <rect x="110" y="110" width="45" height="45" rx="8" fill="#F97316" />
+  <!-- Sobojinski Solutions Logo: abstract "S" built from rounded bars on deep navy -->
+  <rect width="200" height="200" rx="40" fill="#0F172A"/>
+  <!-- Top bar -->
+  <rect x="52" y="52" width="96" height="24" rx="12" fill="#2563EB"/>
+  <!-- Middle bar -->
+  <rect x="52" y="88" width="72" height="24" rx="12" fill="#3B82F6"/>
+  <!-- Bottom bar -->
+  <rect x="52" y="124" width="96" height="24" rx="12" fill="#10B981"/>
 </svg>
